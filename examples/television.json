@@ -1,0 +1,1184 @@
+{
+  "channel": {
+    "name": "Television",
+    "number": 2,
+    "group": "Television"
+  },
+  "schedule": {
+    "name": "Television Schedule",
+    "shuffle": false,
+    "guide_mode": "include_all"
+  },
+  "solver": {
+    "time_limit_sec": 60,
+    "block_minutes": 30.0,
+    "seed": 0
+  },
+  "pools": {
+    "silly_symphonies": {
+      "default_type": "other_video",
+      "repeat": {
+        "default_repeatable": true,
+        "default_repeat_cost_min": 10,
+        "default_max_extra_uses": 2
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 5
+      },
+      "items": [
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 01 - The Skeleton Dance (1929).mp4",
+          "duration_min": 5.528,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 02 - El Terrible Toreador (1929).mp4",
+          "duration_min": 6.277,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 03 - Springtime (1929).mp4",
+          "duration_min": 6.25,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 04 - Hell's Bells (1929).mp4",
+          "duration_min": 5.858,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 05 - The Merry Dwarfs (1929).mp4",
+          "duration_min": 6.065,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 06 - Summer (1930).mp4",
+          "duration_min": 5.918,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 07 - Autumn (1930).mp4",
+          "duration_min": 6.567,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 08 - Cannibal Capers (1930).mp4",
+          "duration_min": 5.976,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 09 - Night (1930).mp4",
+          "duration_min": 6.917,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 10 - Frolicking Fish (1930).mp4",
+          "duration_min": 6.128,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 11 - Arctic Antics (1930).mp4",
+          "duration_min": 7.067,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 12 - Midnight In A Toyshop (1930).mp4",
+          "duration_min": 7.63,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 13 - Monkey Melodies (1930).mp4",
+          "duration_min": 7.031,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 14 - Winter (1930).mp4",
+          "duration_min": 6.915,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 15 - Playful Pan (1930).mp4",
+          "duration_min": 7.01,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 16 - Mother Goose Melodies (1931).mp4",
+          "duration_min": 8.192,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 17 - Birds Of A Feather (1931).mp4",
+          "duration_min": 8.096,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 18 - The China Plate (1931).mp4",
+          "duration_min": 7.548,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 19 - The Busy Beavers (1931).mp4",
+          "duration_min": 7.109,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 20 - The Cat's Out (1931).mp4",
+          "duration_min": 7.365,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 21 - Egyptian Melodies (1931).mp4",
+          "duration_min": 6.356,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 22 - The Clock Store (1931).mp4",
+          "duration_min": 7.22,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 23 - The Spider And The Fly (1931).mp4",
+          "duration_min": 7.23,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 24 - The Fox Hunt (1931).mp4",
+          "duration_min": 6.401,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 25 - The Ugly Duckling (1931).mp4",
+          "duration_min": 6.743,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 26 - The Bird Store (1932).mp4",
+          "duration_min": 6.875,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 27 - The Bears And The Bees (1932).mp4",
+          "duration_min": 6.392,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 28 - Just Dogs (1932).mp4",
+          "duration_min": 7.229,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 29 - Flowers And Trees (1932).mp4",
+          "duration_min": 7.837,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 30 - King Neptune (1932).mp4",
+          "duration_min": 7.225,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 31 - Bugs In Love (1932).mp4",
+          "duration_min": 7.086,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 32 - Babes In The Woods (1932).mp4",
+          "duration_min": 7.698,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 33 - Santa's Workshop (1932).mp4",
+          "duration_min": 6.697,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 34 - Birds In The Spring (1933).mp4",
+          "duration_min": 7.3,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 35 - Father Noah's Ark (1933).mp4",
+          "duration_min": 8.434,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 36 - Three Little Pigs (1933).mp4",
+          "duration_min": 8.73,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 37 - Old King Cole (1933).mp4",
+          "duration_min": 7.49,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 38 - Lullaby Land (1933).mp4",
+          "duration_min": 7.396,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 39 - The Pied Piper (1933).mp4",
+          "duration_min": 7.621,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 40 - The Night Before Christmas (1933).mp4",
+          "duration_min": 8.527,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 41 - The China Shop (1934).mp4",
+          "duration_min": 8.442,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 42 - The Grasshopper And The Ants (1934).mp4",
+          "duration_min": 8.438,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 43 - Funny Little Bunnies (1934).mp4",
+          "duration_min": 7.172,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 44 - The Big Bad Wolf (1934).mp4",
+          "duration_min": 9.377,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 45 - The Wise Little Hen (1934).mp4",
+          "duration_min": 7.945,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 46 - The Flying Mouse (1934).mp4",
+          "duration_min": 9.345,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 47 - Peculiar Penguins (1934).mp4",
+          "duration_min": 9.396,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 48 - The Goddess Of Spring (1934).mp4",
+          "duration_min": 9.602,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 49 - The Tortoise And The Hare (1935).mp4",
+          "duration_min": 8.625,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 50 - The Golden Touch (1935).mp4",
+          "duration_min": 10.07,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 51 - The Robber Kitten (1935).mp4",
+          "duration_min": 7.798,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 52 - Water Babies (1935).mp4",
+          "duration_min": 8.27,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 53 - The Cookie Carnival (1935).mp4",
+          "duration_min": 8.01,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 54 - Who Killed Cock Robin (1935).mp4",
+          "duration_min": 8.525,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 55 - Music Land (1935).mp4",
+          "duration_min": 9.587,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 56 - Three Orphan Kittens (1935).mp4",
+          "duration_min": 8.977,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 57 - Cock O' The Walk (1935).mp4",
+          "duration_min": 8.426,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 58 - Broken Toys (1935).mp4",
+          "duration_min": 7.952,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 59 - Elmer Elephant (1936).mp4",
+          "duration_min": 8.507,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 60 - Three Little Wolves (1936).mp4",
+          "duration_min": 9.372,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 61 - Toby Tortoise Returns (1936).mp4",
+          "duration_min": 7.493,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 62 - Three Blind Mousketeers (1936).mp4",
+          "duration_min": 8.808,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 63 - The Country Cousin (1936).mp4",
+          "duration_min": 9.29,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 64 - Mother Pluto (1936).mp4",
+          "duration_min": 8.614,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 65 - More Kittens (1936).mp4",
+          "duration_min": 8.274,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 66 - Woodland Café (1937).mp4",
+          "duration_min": 7.642,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 67 - Little Hiawatha (1937).mp4",
+          "duration_min": 9.217,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 68 - The Old Mill (1937).mp4",
+          "duration_min": 8.722,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 69 - The Moth And The Flame (1938).mp4",
+          "duration_min": 7.808,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 70 - Wynken, Blynken And Nod (1938).mp4",
+          "duration_min": 8.315,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 71 - Farmyard Symphony (1938).mp4",
+          "duration_min": 8.206,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 72 - Merbabies (1938).mp4",
+          "duration_min": 8.591,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 73 - Mother Goose Goes Hollywood (1938).mp4",
+          "duration_min": 7.966,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 74 - The Practical Pig (1939).mp4",
+          "duration_min": 8.393,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 75 - The Ugly Duckling (1939).mp4",
+          "duration_min": 8.996,
+          "type": "other_video"
+        }
+      ]
+    },
+    "schoolhouse_rock": {
+      "default_type": "other_video",
+      "repeat": {
+        "default_repeatable": true,
+        "default_repeat_cost_min": 10,
+        "default_max_extra_uses": 2
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 5
+      },
+      "items": [
+        {
+          "path": "/media/other_videos/schoolhouse-rock/01 Three Is A Magic Number.mkv",
+          "duration_min": 3.114,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/02 My Hero Zero.mkv",
+          "duration_min": 3.088,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/03 Elementary My Dear.mkv",
+          "duration_min": 3.086,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/04 The Four Legged Zoo.mkv",
+          "duration_min": 3.122,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/05 Ready Or Not Here I Come.mkv",
+          "duration_min": 3.168,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/06 I Got Six.mkv",
+          "duration_min": 3.117,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/07 Lucky Seven Sampson.mkv",
+          "duration_min": 3.092,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/08 Figure Eight.mkv",
+          "duration_min": 3.12,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/09 Naughty Number Nine.mkv",
+          "duration_min": 3.144,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/10 The Good Eleven.mkv",
+          "duration_min": 3.079,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/11 Little Twelvetoes.mkv",
+          "duration_min": 3.197,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/12 A Noun Is A Person Place Or Thing.mkv",
+          "duration_min": 3.1,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/13 Verb Thats Whats Happening.mkv",
+          "duration_min": 3.236,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/14 Conjunction Junction.mkv",
+          "duration_min": 3.102,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/15 Interjections.mkv",
+          "duration_min": 3.201,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/16 Unpack Your Adjectives.mkv",
+          "duration_min": 3.051,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/17 Lolly Lolly Lolly Get Your Adverbs Here.mkv",
+          "duration_min": 3.213,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/18 Rufus Xavier Sasparilla.mkv",
+          "duration_min": 3.142,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/19 Busy Prepositions.mkv",
+          "duration_min": 3.251,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/20 The Tale Of Mr Morton.mkv",
+          "duration_min": 3.129,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/21 No More Kings.mkv",
+          "duration_min": 3.221,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/22 The Shot Heard Round the World.mkv",
+          "duration_min": 3.181,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/23 The Preamble.mkv",
+          "duration_min": 3.105,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/24 Sufferin Till Suffrage.mkv",
+          "duration_min": 3.108,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/25 Im Just A Bill.mkv",
+          "duration_min": 3.199,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/26 The Great American Melting Pot.mkv",
+          "duration_min": 3.063,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/27 Elbow Room.mkv",
+          "duration_min": 3.183,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/28 Fireworks.mkv",
+          "duration_min": 3.108,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/29 Mother Necessity.mkv",
+          "duration_min": 3.083,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/30 Three Ring Government.mkv",
+          "duration_min": 3.038,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/31 Im Gonna Send Your Vote To College In Surround.mkv",
+          "duration_min": 3.254,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/32 You Earned Your Diploma and Presidential Minute.mkv",
+          "duration_min": 1.376,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/33 A Victim Of Gravity.mkv",
+          "duration_min": 3.073,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/34 Interplanet Janet.mkv",
+          "duration_min": 3.185,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/35 The Body Machine.mkv",
+          "duration_min": 3.089,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/36 Do The Circulation.mkv",
+          "duration_min": 3.134,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/37 The Energy Blues.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/38 Them Not So Dry Bones.mkv",
+          "duration_min": 3.191,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/39 Electricity Electricity.mkv",
+          "duration_min": 3.078,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/40 Telegraph Line.mkv",
+          "duration_min": 3.122,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/41 The Weather Show.mkv",
+          "duration_min": 2.954,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/42 Scooter Computer Introduction.mkv",
+          "duration_min": 3.385,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/43 Scooter Computer Hardware.mkv",
+          "duration_min": 3.354,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/44 Scooter Computer Software.mkv",
+          "duration_min": 3.371,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/45 Scooter Computer Number Cruncher.mkv",
+          "duration_min": 3.371,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/46 Dollars And Sense.mkv",
+          "duration_min": 3.102,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/47 Tax Man Max.mkv",
+          "duration_min": 3.058,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/48 Where The Money Goes.mkv",
+          "duration_min": 3.247,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/49 Seven Dollars Fifty Cents Once A Week.mkv",
+          "duration_min": 3.157,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/50 Tyrannosaurus Debt.mkv",
+          "duration_min": 3.264,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/51 This For That.mkv",
+          "duration_min": 3.097,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/52 Walkin On The Wall Street.mkv",
+          "duration_min": 3.148,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/53 The Checks In The Mail.mkv",
+          "duration_min": 3.121,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/54 Report from the North Pole.mkv",
+          "duration_min": 3.076,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/55 The Little Things We Do.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/56 The Trash Can Band.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/57 You Oughta Be Savin Water.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/58 The Rainforest.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/59 Save the Ocean.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/60 Fat Cat Blue - The Clean Rivers Song.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/61 A Tiny Urban Zoo.mkv",
+          "duration_min": 2.988,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/62 Solar Power to the People.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/63 Windy and the Windmills.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/64 Don't Be a Carbon Sasquatch.mkv",
+          "duration_min": 3.071,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/65 The Three Rs.mkv",
+          "duration_min": 3.154,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/66 Music Video - Conjunction Junction - Better Than Ezra.mkv",
+          "duration_min": 3.286,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/67 Music Video - Electricity Electricity - Goodness.mkv",
+          "duration_min": 3.436,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/68 Music Video - Im Just a Bill - Deluxe Folk Implosion.mkv",
+          "duration_min": 3.404,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/69 Music Video - My Hero Zero - Lemonheads.mkv",
+          "duration_min": 3.083,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/schoolhouse-rock/73 Nike Commercial Three is a Magic Number.mkv",
+          "duration_min": 0.554,
+          "type": "other_video"
+        }
+      ]
+    },
+    "krtek": {
+      "default_type": "episode",
+      "sequential": true,
+      "repeat": {
+        "default_repeatable": false
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 5
+      },
+      "items": [
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E01 - How the Little Mole Got His Trousers.mp4",
+          "duration_min": 13.066,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E02 - The Little Mole and the Car.mp4",
+          "duration_min": 15.194,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E03 - The Little Mole and the Rocket.mp4",
+          "duration_min": 8.702,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E06 - The Little Mole and the Chewing Gum.mp4",
+          "duration_min": 7.985,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E07 - The Little Mole at the Zoo.mp4",
+          "duration_min": 6.733,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E08 - The Little Mole as the Gardener.mp4",
+          "duration_min": 7.498,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E09 - The Little Mole and the Hedgehog.mp4",
+          "duration_min": 9.168,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E10 - The Little Mole and the Lollipop.mp4",
+          "duration_min": 8.742,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E11 - The Little Mole and the Television.mp4",
+          "duration_min": 6.052,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E12 - The Little Mole and the Umbrella.mp4",
+          "duration_min": 7.769,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E13 - The Little Mole as a Painter.mp4",
+          "duration_min": 10.052,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E14 - The Little Mole and the Matches.mp4",
+          "duration_min": 5.735,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E15 - The Little Mole and the Music.mp4",
+          "duration_min": 5.602,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E19 - The Little Mole the Watchmaker.mp4",
+          "duration_min": 5.797,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/krtek/Season 01/Krtek - S01E20 - The Little Mole and Christmas.mp4",
+          "duration_min": 6.01,
+          "type": "episode"
+        }
+      ]
+    },
+    "goofy_shorts": {
+      "default_type": "other_video",
+      "repeat": {
+        "default_repeatable": true,
+        "default_repeat_cost_min": 5,
+        "default_max_extra_uses": 2
+      },
+      "items": [
+        {
+          "path": "/media/other_videos/Goofy Shorts/Goofy - Goofy Gymnastics (1949).mkv",
+          "duration_min": 6.469,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Goofy Shorts/Goofy - How to Play Baseball (1942).mp4",
+          "duration_min": 8.801,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Goofy Shorts/Goofy - The Olympic Champ (1942).mkv",
+          "duration_min": 7.073,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Goofy Shorts/Goofy - Victory Vehicles (1943).mkv",
+          "duration_min": 9.701,
+          "type": "other_video"
+        }
+      ]
+    },
+    "mickey_shorts": {
+      "default_type": "other_video",
+      "repeat": {
+        "default_repeatable": true,
+        "default_repeat_cost_min": 5,
+        "default_max_extra_uses": 2
+      },
+      "items": [
+        {
+          "path": "/media/other_videos/Mickey Mouse Shorts/Mickey Mouse - Brave Little Tailor (1938).mp4",
+          "duration_min": 9.009,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Mickey Mouse Shorts/Mickey Mouse - Mickey and the Beanstalk (1947).mp4",
+          "duration_min": 31.914,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Mickey Mouse Shorts/Mickey Mouse - The Prince and the Pauper (1990).mp4",
+          "duration_min": 25.442,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/Mickey Mouse Shorts/Mickey Mouse - Thru the Mirror (1936).mp4",
+          "duration_min": 8.829,
+          "type": "other_video"
+        }
+      ]
+    },
+    "movies": {
+      "default_type": "movie",
+      "repeat": {
+        "default_repeatable": false
+      },
+      "items": [
+        {
+          "path": "/media/movies/Donald in Mathmagic Land (1959)/＂Donald in Mathmagic Land＂  (4K AI Upscale) [hl6JDv4ZG7U].mkv",
+          "duration_min": 27.717,
+          "type": "movie"
+        }
+      ]
+    }
+  },
+  "bumpers": {
+    "slots_per_break": 1,
+    "mixing_strategy": "round_robin",
+    "pools": {
+      "default": {
+        "weight": 1.0,
+        "items": [
+          {
+            "path": "/media/other_videos/coronet/Act Your Age (1949) [49JzdN7RnZ0].mkv",
+            "duration_min": 13.367,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Am I Trustworthy？ (1950) [mYQ6j0HLdok].mkv",
+            "duration_min": 10.364,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Appreciating Our Parents (1950) [AdmsMsa_FFU].mkv",
+            "duration_min": 10.28,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Are You A Good Citizen？ (1949) [gWr7SPDBITU].mkv",
+            "duration_min": 10.339,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Are You Popular？ (1947) [DjYBRhoQjWI].mkv",
+            "duration_min": 9.885,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Are You Ready For Marriage (1950) [f-GsZJYDIek].mkv",
+            "duration_min": 16.062,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Attitudes and Health (1949) [5h-rlgwC31s].mkv",
+            "duration_min": 9.925,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Better Use of Leisure Time (1950) [3uTpgBkZkUU].mkv",
+            "duration_min": 10.541,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Control Your Emotions (1950) [6k4D7pu_-ys].mkv",
+            "duration_min": 13.295,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Date Etiquette (1952) [ZyeiLujYvpE].mkv",
+            "duration_min": 9.633,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Dating Dos and Don'ts (1949) [3hCkwm_UDrw].mkv",
+            "duration_min": 12.428,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Developing Friendships (1950) [CRgXp_ClOBc].mkv",
+            "duration_min": 11.076,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Developing Leadership (1949) [zcBIPCgoi_0].mkv",
+            "duration_min": 9.757,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Exercise and Health (1949) [V_-aXBNncLo].mkv",
+            "duration_min": 9.849,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Family Life (1949) [aT-B66npbM8].mkv",
+            "duration_min": 9.822,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Feeling Left Out (1951) [TTtczeaMQEk].mkv",
+            "duration_min": 11.296,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Going Steady (1951) [BaMO-Y3fYm8].mkv",
+            "duration_min": 10.612,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Good Eating Habits (1951) [qQa-MYULdwg].mkv",
+            "duration_min": 9.764,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Good Table Manners (1951) [2bh0gkPQOoA].mkv",
+            "duration_min": 10.334,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Hoppy the Bunny (1953) [pram7A47FSU].mkv",
+            "duration_min": 10.263,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How Do You Know It's Love (1950) [c-R55WH_FRM].mkv",
+            "duration_min": 12.965,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How Friendly Are You (1952) [RP5t7mWNvdY].mkv",
+            "duration_min": 10.343,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How Quiet Helps at School (1953) [3y-4LvX9ibs].mkv",
+            "duration_min": 10.48,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How To Be Well-Groomed (1949) [q0UbQ6nl8aI].mkv",
+            "duration_min": 10.688,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How to Keep a Job (1949) [D5cICAdkSF4].mkv",
+            "duration_min": 11.377,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How to Say No (1951) [brtaGiJaSAE].mkv",
+            "duration_min": 10.507,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How to Study (1946) [5U5Q3357T_k].mkv",
+            "duration_min": 8.721,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Improve Your Personality (1951) [VvFF9NlRlxQ].mkv",
+            "duration_min": 10.221,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Joan Avoids a Cold (1947) [hHE3DK9m-TU].mkv",
+            "duration_min": 10.429,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Lunchroom Manners (1959) [gTC70A5F1pY].mkv",
+            "duration_min": 9.533,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Marriage Is a Partnership (1951) [7l4NC0YkDlI].mkv",
+            "duration_min": 16.343,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Mind Your Manners (1953) [hk4cLSCEai4].mkv",
+            "duration_min": 10.703,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/More Dates For Kay (1952) [RdN_nZgpXec].mkv",
+            "duration_min": 10.157,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/One More Year On The Family Farm？ (1977) [unRjiSmdCqM].mkv",
+            "duration_min": 21.369,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Overcoming Fear (1950) [Vsdj8iti7Kg].mkv",
+            "duration_min": 12.653,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Parents： Who Needs Them？ (1973) [Lwdjpq0WQGI].mkv",
+            "duration_min": 9.76,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Self-Conscious Guy (1951) [ieQDxgs6CUw].mkv",
+            "duration_min": 10.382,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Shy Guy (1947) [0fppyTeiGds].mkv",
+            "duration_min": 13.593,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Snap Out Of It (1951) [zhfYvODAD9w].mkv",
+            "duration_min": 12.097,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Social Courtesy (1951) [Lqb34y2LBNY].mkv",
+            "duration_min": 10.289,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/The Fun of Being Thoughtful (1950) [PrgQ8cshgfo].mkv",
+            "duration_min": 10.15,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/The Fun of Making Friends (1950) [uVd9ekYnwV8].mkv",
+            "duration_min": 9.334,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/The Golden Rule (1953) [Zus5QNqXQcc].mkv",
+            "duration_min": 9.701,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Understand Your Emotions (1950) [q7K5CgnGpnA].mkv",
+            "duration_min": 12.87,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Ways To Better Conversation (1950) [071v0soAHUQ].mkv",
+            "duration_min": 8.805,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Ways to Settle Disputes (1950) [JCsp5lGxeCM].mkv",
+            "duration_min": 10.106,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/What To Do On A Date (1950) [5OuGdXI_zto].mkv",
+            "duration_min": 10.771,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Your Thrift Habits (1948) [wvILxoZ8yiI].mkv",
+            "duration_min": 10.584,
+            "type": "other_video"
+          }
+        ]
+      }
+    }
+  }
+}

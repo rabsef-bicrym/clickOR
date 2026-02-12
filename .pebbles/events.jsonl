@@ -1,0 +1,24 @@
+{"type":"create","timestamp":"2026-02-11T23:38:37.836343Z","issue_id":"etv2-692","payload":{"description":"Rename product/repo references from current name to clickOR, including code/docs where applicable, while minimizing disruption.","priority":"1","title":"clickOR rename rollout","type":"epic"}}
+{"type":"create","timestamp":"2026-02-11T23:38:37.853094Z","issue_id":"etv2-5f8","payload":{"description":"Define and implement a more graceful strategy for clips under 15 seconds so title cards do not loop unintentionally while preserving programming flexibility.","priority":"1","title":"Design graceful short-clip looping behavior","type":"task"}}
+{"type":"create","timestamp":"2026-02-11T23:38:37.869205Z","issue_id":"etv2-905","payload":{"description":"Rewrite README to remove personal information, adopt clickOR naming, and focus on story/value/what more than implementation details.","priority":"2","title":"Modernize README for public FOSS audience","type":"task"}}
+{"type":"create","timestamp":"2026-02-11T23:38:37.88472Z","issue_id":"etv2-fdd","payload":{"description":"Author a reusable SKILL.md (with frontmatter) that teaches Codex/Claude Code how to operate this project effectively.","priority":"1","title":"Create agent SKILL.md for clickOR","type":"task"}}
+{"type":"rename","timestamp":"2026-02-11T23:38:41.194296Z","issue_id":"etv2-5f8","payload":{"new_id":"etv2-692.1"}}
+{"type":"dep_add","timestamp":"2026-02-11T23:38:41.194296Z","issue_id":"etv2-692.1","payload":{"dep_type":"parent-child","depends_on":"etv2-692"}}
+{"type":"rename","timestamp":"2026-02-11T23:38:41.213335Z","issue_id":"etv2-905","payload":{"new_id":"etv2-692.2"}}
+{"type":"dep_add","timestamp":"2026-02-11T23:38:41.213335Z","issue_id":"etv2-692.2","payload":{"dep_type":"parent-child","depends_on":"etv2-692"}}
+{"type":"rename","timestamp":"2026-02-11T23:38:41.231878Z","issue_id":"etv2-fdd","payload":{"new_id":"etv2-692.3"}}
+{"type":"dep_add","timestamp":"2026-02-11T23:38:41.231878Z","issue_id":"etv2-692.3","payload":{"dep_type":"parent-child","depends_on":"etv2-692"}}
+{"type":"dep_add","timestamp":"2026-02-11T23:38:41.254114Z","issue_id":"etv2-692","payload":{"dep_type":"blocks","depends_on":"etv2-692.1"}}
+{"type":"dep_add","timestamp":"2026-02-11T23:38:41.274005Z","issue_id":"etv2-692","payload":{"dep_type":"blocks","depends_on":"etv2-692.2"}}
+{"type":"dep_add","timestamp":"2026-02-11T23:38:41.293846Z","issue_id":"etv2-692","payload":{"dep_type":"blocks","depends_on":"etv2-692.3"}}
+{"type":"create","timestamp":"2026-02-11T23:38:45.912931Z","issue_id":"etv2-e30","payload":{"description":"Replace legacy project naming with clickOR in user-facing and developer-facing references, and identify any follow-on rename risks.","priority":"1","title":"Apply clickOR naming across product","type":"task"}}
+{"type":"rename","timestamp":"2026-02-11T23:38:48.371389Z","issue_id":"etv2-e30","payload":{"new_id":"etv2-692.4"}}
+{"type":"dep_add","timestamp":"2026-02-11T23:38:48.371389Z","issue_id":"etv2-692.4","payload":{"dep_type":"parent-child","depends_on":"etv2-692"}}
+{"type":"dep_add","timestamp":"2026-02-11T23:38:48.39451Z","issue_id":"etv2-692","payload":{"dep_type":"blocks","depends_on":"etv2-692.4"}}
+{"type":"status_update","timestamp":"2026-02-11T23:38:54.073704Z","issue_id":"etv2-692.4","payload":{"status":"in_progress"}}
+{"type":"status_update","timestamp":"2026-02-11T23:41:35.001071Z","issue_id":"etv2-692.1","payload":{"status":"closed"}}
+{"type":"status_update","timestamp":"2026-02-11T23:41:35.026372Z","issue_id":"etv2-692.2","payload":{"status":"closed"}}
+{"type":"status_update","timestamp":"2026-02-11T23:41:35.047845Z","issue_id":"etv2-692.3","payload":{"status":"closed"}}
+{"type":"status_update","timestamp":"2026-02-11T23:44:15.325467Z","issue_id":"etv2-692.4","payload":{"status":"closed"}}
+{"type":"close","timestamp":"2026-02-11T23:44:17.50323Z","issue_id":"etv2-692","payload":{}}
+{"type":"create","timestamp":"2026-02-11T23:58:11.27158Z","issue_id":"etv2-c50","payload":{"description":"ErsatzTV appears to support time-based schedule programming (fixed/dynamic schedule items, count/multiple behavior), but clickOR currently writes a single Flood schedule item shape. Investigate a bounded v1 dayparts model and confirm exact ProgramSchedule/ProgramScheduleItem subtype writes against a real ErsatzTV DB version before implementation.\\n\\nKey note: this is viable but requires careful integration to avoid brittle direct-DB coupling and to preserve clickOR's deterministic lineup story.","priority":"4","title":"Assess bounded dayparts support in clickOR","type":"task"}}

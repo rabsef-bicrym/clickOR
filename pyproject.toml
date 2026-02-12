@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clickor"
+version = "0.1.0"
+description = "Generate ErsatzTV channel lineups with OR-Tools and apply them to an ErsatzTV sqlite DB."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Maintainer" }]
+dependencies = [
+  "ortools>=9.8",
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+clickor = "clickor.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

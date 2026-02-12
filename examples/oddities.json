@@ -1,0 +1,1329 @@
+{
+  "channel": {
+    "name": "Oddities",
+    "number": 3,
+    "group": "Oddities"
+  },
+  "schedule": {
+    "name": "Oddities Schedule",
+    "shuffle": false,
+    "guide_mode": "include_all"
+  },
+  "solver": {
+    "time_limit_sec": 60,
+    "block_minutes": 30.0,
+    "seed": 0
+  },
+  "pools": {
+    "mummenschanz": {
+      "default_type": "other_video",
+      "repeat": {
+        "default_repeatable": true,
+        "default_repeat_cost_min": 8,
+        "default_max_extra_uses": 2
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 5
+      },
+      "items": [
+        {
+          "path": "/media/other_videos/mummenschanz/40 Jahre Mummenschanz： 12. & 13. Juni 2012 in Bregenz [W3QFZjsFDfw].mkv",
+          "duration_min": 2.878,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/9039D [i8XYuJ8W_nU].mkv",
+          "duration_min": 5.057,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/MUMMENSCHANZ @ Barcelona aixeca el tel TV3 [FAXsd0MIB6c].mkv",
+          "duration_min": 4.228,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/MUMMENSCHANZ @ Helene Fischer Show [4zYbxfFtBk0].mkv",
+          "duration_min": 4.838,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/MUMMENSCHANZ @ www.8newsnow.com [SoGLBbs89HU].mkv",
+          "duration_min": 5.066,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/MUMMENSCHANZ EN MEDELLÍN [qw2qSUQCBzQ].mkv",
+          "duration_min": 2.751,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/MUMMENSCHANZ Promo [WGwfV3nrelY].mkv",
+          "duration_min": 1.823,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/MUMMENSCHANZ [Z0KiKUk9nHc].mkv",
+          "duration_min": 2.056,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/MUMMENSCHANZ ＂40 years＂ highlights [lvIkCXAAuLo].mkv",
+          "duration_min": 2.116,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz - A Kiss (new) [ApOtHY6YXqs].mkv",
+          "duration_min": 0.892,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz - Toilet-Paper-Face [bdTYScKgEus].mkv",
+          "duration_min": 1.991,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz @ Filmwochenschau [dH6MEdvqjz4].mkv",
+          "duration_min": 6.017,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz @ The Tonight Show With Johnny Carson 1990 [0FWCRV4weI0].mkv",
+          "duration_min": 6.791,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz Performs [3k4FXvdeIrw].mkv",
+          "duration_min": 3.993,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz Video [xLy3bgjaw1c].mkv",
+          "duration_min": 3.085,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz [Ins4QXypqdw].mkv",
+          "duration_min": 6.783,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz [lkontjT7uvg].mkv",
+          "duration_min": 22.58,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz at the Vets [LUDt71uqBUU].mkv",
+          "duration_min": 5.515,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz on The Mike Douglas Show, 1977 [5WnNyTAyF78].mkv",
+          "duration_min": 9.964,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz on the Muppet Show (1976) 1 of 5 [3eazq_8jCOg].mkv",
+          "duration_min": 2.346,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz on the Muppet Show (1976) 4 of 5 [xe95sn0cN3k].mkv",
+          "duration_min": 3.647,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz 瑞士默劇團 [s5M7n9NQ5BI].mkv",
+          "duration_min": 6.17,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz ＂B＂ [DcDlFf4I3vM].mkv",
+          "duration_min": 7.757,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz ＂C＂ [Hiej--45oI8].mkv",
+          "duration_min": 3.094,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Mummenschanz@Benissimo [9nkw4PDVksY].mkv",
+          "duration_min": 4.497,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/Sesame Street - Mummenschanz - The Clam [zz3C1CD_x2Y].mkv",
+          "duration_min": 1.809,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/The story of Mummenschanz 1⧸9 [-PzNFaKKugA].mkv",
+          "duration_min": 8.328,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/The story of Mummenschanz 2⧸9 [vOOkXVw9sRk].mkv",
+          "duration_min": 9.222,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/The story of Mummenschanz 3⧸9 [BEZzCCBhsog].mkv",
+          "duration_min": 10.405,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/The story of Mummenschanz 4⧸9 [yEIIibzUhyg].mkv",
+          "duration_min": 7.914,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/The story of Mummenschanz 5⧸9 [iNslsKZa6vM].mkv",
+          "duration_min": 9.716,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/The story of Mummenschanz 6⧸9 [weJhNxHQrXM].mkv",
+          "duration_min": 11.045,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/The story of Mummenschanz 8⧸9 [SbYV5vCQWIU].mkv",
+          "duration_min": 8.817,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/mummenschanz/The story of Mummenschanz 9⧸9 [OjF07BGNdDc].mkv",
+          "duration_min": 8.542,
+          "type": "other_video"
+        }
+      ]
+    },
+    "driessen": {
+      "default_type": "other_video",
+      "repeat": {
+        "default_repeatable": true,
+        "default_repeat_cost_min": 5,
+        "default_max_extra_uses": 2
+      },
+      "items": [
+        {
+          "path": "/media/other_videos/driessen/Cat Meets Dog [9nvWakgwumg].mkv",
+          "duration_min": 11.27,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/David, by Paul Driessen (1977) [9emftH5hUOM].mkv",
+          "duration_min": 8.407,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/Paul Driessen - Oh What a Knight (La Belle et la boite) [1982] [87OUak4OSSY].mkv",
+          "duration_min": 3.19,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/Paul Driessen - Oh what a Nico (2004) [o56Lv0b8iXY].mkv",
+          "duration_min": 1.019,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/Paul Driessen - The Boy Who Saw the Iceberg [oA2wseEesC4].mkv",
+          "duration_min": 8.492,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/Paul Driessen - The End of the World in Four Seasons (1995) [BpwNv0Xojao].mkv",
+          "duration_min": 12.989,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/Paul Driessen - The Water People (1992) [9ZzIy5YTBsw].mkv",
+          "duration_min": 12.749,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/Paul Driessen - The Writer (De Schrijver en de Dood) (1988) [ayYjywk4JSs].mkv",
+          "duration_min": 11.794,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/Paul driessen - The killing of an egg [1z-XTeyV8Dk].mkv",
+          "duration_min": 2.827,
+          "type": "other_video"
+        },
+        {
+          "path": "/media/other_videos/driessen/Spiegel eiland (Paul Driessen, 1985) [_Q3keMkhDEs].mkv",
+          "duration_min": 2.889,
+          "type": "other_video"
+        }
+      ]
+    },
+    "button_moon": {
+      "default_type": "episode",
+      "repeat": {
+        "default_repeatable": false
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 5
+      },
+      "items": [
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon - Scruffy in the Park [Cdndiv1zCPY].mkv",
+          "duration_min": 8.04,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon - The Ice Cream Factory [eq7LmpeYARo].mkv",
+          "duration_min": 3.309,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon 1980 S01E07 The Duck Who Forgot What He Was HD [2jonF95rwYA].mkv",
+          "duration_min": 10.987,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon 1980 S01E08 Scruffy and the Bone HD [nlj5lzJGlwI].mkv",
+          "duration_min": 10.338,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon 1980 S01E09 The Grasshopper and the Ants HD [Wemdx-1OKNo].mkv",
+          "duration_min": 11.052,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon 1980 S01E10 The Magic Totem HD [KRp4SOkD-WE].mkv",
+          "duration_min": 11.136,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon 1980 S01E11 The Hare and the Tortoise HD [PvXS-vJTQfc].mkv",
+          "duration_min": 10.961,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon 1980 S01E12 The Fox and the Hen HD [5_P6gO2RM8A].mkv",
+          "duration_min": 10.278,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon 1980 S01E13 House For Sale HD [YOhahD_ArT4].mkv",
+          "duration_min": 10.517,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon Boat Race to Button Moon DVD [OVxcemvJqAI].mkv",
+          "duration_min": 31.996,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon S01E01 Three Little Pigs HD [wG8ySewB0mQ].mkv",
+          "duration_min": 10.958,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon S01E02 The Witch's Toast HD [LYvKrM8sess].mkv",
+          "duration_min": 11.11,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon S01E03 Billy Goat's Gruff HD [siy2kcs4yB4].mkv",
+          "duration_min": 10.664,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon S01E04 Sid and Baby HD [HaKJpmF46I0].mkv",
+          "duration_min": 11.035,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/button-moon/Season 01/Button Moon S01E06 Storks HD [oN1iaStTxBE].mkv",
+          "duration_min": 10.883,
+          "type": "episode"
+        }
+      ]
+    },
+    "noggin": {
+      "default_type": "episode",
+      "repeat": {
+        "default_repeatable": false
+      },
+      "items": [
+        {
+          "path": "/media/shows/noggin/Season 01/05 Noggin and the Moon Mouse @ Bivalium Piplouf Tale [EZsouxdbQEU].mkv",
+          "duration_min": 7.773,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/Noggin The Nog Memory [mnxxhVXIVGg].mkv",
+          "duration_min": 2.235,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/Noggin The Nog [3mk5QulSmu8].mkv",
+          "duration_min": 21.374,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/Noggin the Nog - 'Noggin and the Ice Dragon' - 2011 - BBC4 Archive [z1EPXh7O2VU].mkv",
+          "duration_min": 12.998,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/Noggin the Nog - Nogbad the Bad [2pyOJgNnvYo].mkv",
+          "duration_min": 1.677,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/Noggin the Nog 1959 [Jisqle37uWI].mkv",
+          "duration_min": 2.418,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/Noggin the Nog Noggin and the Pie (1982 remake of 1959 original) [-8jiPy3lPE4].mkv",
+          "duration_min": 18.951,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/The Saga of Noggin the Nog- The Game (part 1) [rItI8Iig9cg].mkv",
+          "duration_min": 6.664,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/The Saga of Noggin the Nog- The Game part 2 [K-_2WJDtUbA].mkv",
+          "duration_min": 15.014,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/noggin/Season 01/👑 02 Noggin and the Whale 🐳 ｜ Tale [74H8WsbZgdE].mkv",
+          "duration_min": 7.823,
+          "type": "episode"
+        }
+      ]
+    },
+    "magic_roundabout": {
+      "default_type": "episode",
+      "repeat": {
+        "default_repeatable": true,
+        "default_repeat_cost_min": 10,
+        "default_max_extra_uses": 1
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 5
+      },
+      "items": [
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/THE MAGIC ROUNDABOUT   ORIGINAL BBC 1970's EPISODE [SOHVMJSKdM8].mkv",
+          "duration_min": 4.962,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   22nd April 1993 [OCsNaU3ROvk].mkv",
+          "duration_min": 4.597,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   Camping [hv2WaH808c8].mkv",
+          "duration_min": 4.412,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   Dougal Sees Double [nnZ5Mmrbzb0].mkv",
+          "duration_min": 4.833,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   Dougal's Scarf [4cKbCJ90yj8].mkv",
+          "duration_min": 4.867,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E1   Dougal   Film Director [ic90tf6lYPI].mkv",
+          "duration_min": 4.515,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E10   The Experiment [rBSJ_HzERQ4].mkv",
+          "duration_min": 4.343,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E11   Magic Carpet [EH5aeaY5h6U].mkv",
+          "duration_min": 4.21,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E12   Oil [EF20EZp_Rws].mkv",
+          "duration_min": 4.333,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E13   Vote For Dougal [bnohIFs0dJc].mkv",
+          "duration_min": 4.453,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E14   Bubbles [lgcZUlrWYC0].mkv",
+          "duration_min": 4.354,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E15   Piano Moving [X_vVNVvG5ro].mkv",
+          "duration_min": 4.346,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E16   Let's Play At Cats [lhW7yK2w2DU].mkv",
+          "duration_min": 3.76,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E17   Watch The Birdie [rK0WzP7HJc4].mkv",
+          "duration_min": 4.02,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E18   Dylan   Sculptor [uEPn4Nkhf6o].mkv",
+          "duration_min": 4.349,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E19   The Orchestra [76WsK6IZ-0o].mkv",
+          "duration_min": 4.305,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E2   Walking Sticks [7qS9-r8u2uI].mkv",
+          "duration_min": 4.4,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E20   Pack Of Cards [o449mTxTclU].mkv",
+          "duration_min": 4.297,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E21   Toffee River [sPacOh9rH5M].mkv",
+          "duration_min": 4.503,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E22   Oil Wells [Wn5Sy5_RXXc].mkv",
+          "duration_min": 4.257,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E23   Banana Skin [PXHVtei9kq4].mkv",
+          "duration_min": 4.147,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E24   Spaghetti Party [QrMHkqRrosc].mkv",
+          "duration_min": 4.34,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E25   Rain [zXIPPsWXiwc].mkv",
+          "duration_min": 4.317,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E26   Baking A Pie [LUU9pz84V_4].mkv",
+          "duration_min": 4.967,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E27   Alarm Clock [m7HGOSKhKhs].mkv",
+          "duration_min": 4.604,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E28   Brian And The Train Race [O6wG1Fr8Tto].mkv",
+          "duration_min": 4.384,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E29   The Chimney Sweep [gEhX4fRshBg].mkv",
+          "duration_min": 4.272,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E3   Bicycle Race [jGE2fr30nBY].mkv",
+          "duration_min": 4.315,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E30   Road Signs [AtVun0JdDQI].mkv",
+          "duration_min": 4.388,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E4   The Cannon [H4rn1Lmwg5Q].mkv",
+          "duration_min": 4.513,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E5   Rustlers [QIer9G3TTrE].mkv",
+          "duration_min": 4.353,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E6   Gold [A-JQWIfAfg0].mkv",
+          "duration_min": 4.059,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E7   Parking Meters [jz8-X6DkOEI].mkv",
+          "duration_min": 4.405,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E8   The Camera [Jax7VqLPusQ].mkv",
+          "duration_min": 4.37,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   E9   The Caravan [aA6yTseQpRQ].mkv",
+          "duration_min": 4.321,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   Ermintrude Gets Stuck [9TnzeeOIhcU].mkv",
+          "duration_min": 5.297,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   Ermintrude's Hat, Part 1 UK, Nigel Planer Version [oTlnk0bk_d4].mkv",
+          "duration_min": 4.962,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout   Flower Picking [FHMeoa8FAyQ].mkv",
+          "duration_min": 4.96,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout  Perfume episode [e7_cLaG3cN4].mkv",
+          "duration_min": 4.65,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - Cow Railway (1970) [Nigel Planer Version, Unstable Audio] [FsWwRhZ-EgY].mkv",
+          "duration_min": 4.917,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - Dougal's Adventure (Eric Thompson, 1970) {RECONSTRUCTED} [8dPztdtfUGo].mkv",
+          "duration_min": 5.205,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - Dougal's Experiment (Eric Thompson, 1970) {RECONSTRUCTED} [jry-iEPz0mM].mkv",
+          "duration_min": 4.902,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - Dougal's Jam (1970) [Nigel Planer Version, Unstable Audio] [FogE6y3a3IM].mkv",
+          "duration_min": 4.867,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - Glasses, Part 2 (1970) [Nigel Planer Version, Unstable Audio] [wtASzwQQA8k].mkv",
+          "duration_min": 4.329,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - Lost Boing (1970) [Nigel Planer Version, Unstable Audio] [olmvEWL-eVQ].mkv",
+          "duration_min": 5.03,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - Penelope is Lazy (1970) [Nigel Planer Version, Unstable Audio] [e7lPlwvLSsY].mkv",
+          "duration_min": 4.857,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - Road Signs (1970) [Nigel Planer Version] [ZYhVByCWH8E].mkv",
+          "duration_min": 5.111,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - The Moody Concerto (Eric Thompson, 1970) {RECONSTRUCTED} [9uCW2T3KiKA].mkv",
+          "duration_min": 4.908,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - The Stiff Necked Heliotropes (Eric Thompson, 1970) {RECONSTRUCTED V2} [RF68QNlT85k].mkv",
+          "duration_min": 4.828,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - The Stiff Necked Heliotropes (Eric Thompson, 1970) {RECONSTRUCTED V3} [xcZLDotjeHc].mkv",
+          "duration_min": 4.828,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) - The Stiff Necked Heliotropes (Eric Thompson, 1970) {RECONSTRUCTED} [o9uWkuxt4wc].mkv",
+          "duration_min": 4.829,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK) Glasses, Part 1 (1970) [Nigel Planer Version, Unstable Audio] [gbLKO6MepNw].mkv",
+          "duration_min": 4.679,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout (UK, Eric Thompson) - Washing Machine (BBC, January 13, 1977) [Q8ZmmfoE_Vc].mkv",
+          "duration_min": 4.815,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - 22nd April 1993 [_3q3iq3IhAg].mkv",
+          "duration_min": 4.597,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - Dougal Sees Double [nx4Jefp_luE].mkv",
+          "duration_min": 4.833,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - Dougal's Scarf [uajon8KEXKo].mkv",
+          "duration_min": 4.866,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E1 - Dougal - Film Director [J2ihhAVLSIk].mkv",
+          "duration_min": 4.514,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E10 - The Experiment [JOdEb5dbnHQ].mkv",
+          "duration_min": 4.342,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E11 - Magic Carpet [VfhftbH24MM].mkv",
+          "duration_min": 4.209,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E12 - Oil [0qGSnHMriRM].mkv",
+          "duration_min": 4.332,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E13 - Vote For Dougal [d2YLBPvoZao].mkv",
+          "duration_min": 4.453,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E14 - Bubbles [Fpwt1WT-NpI].mkv",
+          "duration_min": 4.353,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E15 - Piano Moving [HIGrtt3IJjE].mkv",
+          "duration_min": 4.345,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E16 - Let's Play At Cats [rb2r1pGLWjo].mkv",
+          "duration_min": 3.759,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E17 - Watch The Birdie [KqtwEMuew-k].mkv",
+          "duration_min": 4.019,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E18 - Dylan - Sculptor [HL9LFefsVi0].mkv",
+          "duration_min": 4.348,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E19 - The Orchestra [cGZKvgrNXU8].mkv",
+          "duration_min": 4.305,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E2 - Walking Sticks [PmlDzZqyZSI].mkv",
+          "duration_min": 4.4,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E20 - Pack Of Cards [9pxjGwYYTmM].mkv",
+          "duration_min": 4.296,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E21 - Toffee River [kexCG8hopBI].mkv",
+          "duration_min": 4.502,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E22 - Oil Wells [7o11iQjtv8Q].mkv",
+          "duration_min": 4.256,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E23 - Banana Skin [8ImC-xHrGFc].mkv",
+          "duration_min": 4.147,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E24 - Spaghetti Party [Zgjwc8B5Yso].mkv",
+          "duration_min": 4.339,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E25 - Rain [66j5areBiAs].mkv",
+          "duration_min": 4.316,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E26 - Baking A Pie [1JehpHLjoL0].mkv",
+          "duration_min": 4.966,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E27 - Alarm Clock [iUT3A8yTrSk].mkv",
+          "duration_min": 4.603,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E28 - Brian And The Train Race [_aBMn1NfXdc].mkv",
+          "duration_min": 4.383,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E29 - The Chimney Sweep [QUwAuBDYsbc].mkv",
+          "duration_min": 4.272,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E3 - Bicycle Race [AJ5VbzLu2I0].mkv",
+          "duration_min": 4.358,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E30 - Road Signs [CKXJKwerhbc].mkv",
+          "duration_min": 4.387,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E4 - The Cannon [6EsZqYjk424].mkv",
+          "duration_min": 4.512,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E5 - Rustlers [OFJVSoYdwG4].mkv",
+          "duration_min": 4.352,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E6 - Gold [t055QAoA13Y].mkv",
+          "duration_min": 4.058,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E7 - Parking Meters [AG627K_E91U].mkv",
+          "duration_min": 4.404,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E8 - The Camera [qM179dSlPzY].mkv",
+          "duration_min": 4.37,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - E9 - The Caravan [DlxcYHKWWZM].mkv",
+          "duration_min": 4.32,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - Ermintrude Gets Stuck [_vKPUc-Bk6A].mkv",
+          "duration_min": 5.296,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - Ermintrude's Hat, Part 1 (UK, Nigel Planer Version) [Ov7ku8ge-vQ].mkv",
+          "duration_min": 4.961,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout - Flower Picking [rd2_IGVgPBY].mkv",
+          "duration_min": 4.959,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout 1989 Reissue UK VHS [fgsESk7acdU].mkv",
+          "duration_min": 58.492,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout Jumping Beans episode [bloeMGrutg8].mkv",
+          "duration_min": 4.15,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout Rocking Chair episode [DsKGRm1nQo0].mkv",
+          "duration_min": 4.669,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   Cow Railway 1970 Nigel Planer Version, Unstable Audio [dSfRdEciwiM].mkv",
+          "duration_min": 4.918,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   Dougal's Adventure Eric Thompson, 1970 {RECONSTRUCTED} [f4_uLadJ2vo].mkv",
+          "duration_min": 5.206,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   Dougal's Experiment Eric Thompson, 1970 {RECONSTRUCTED} [G16ra4JiNYk].mkv",
+          "duration_min": 4.903,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   Dougal's Jam 1970 Nigel Planer Version, Unstable Audio [atjd2xBtBKc].mkv",
+          "duration_min": 4.868,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   Glasses, Part 2 1970 Nigel Planer Version, Unstable Audio [miEY-jC93JE].mkv",
+          "duration_min": 4.33,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   Lost Boing 1970 Nigel Planer Version, Unstable Audio [hIsDnp8mNOw].mkv",
+          "duration_min": 5.03,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   Penelope is Lazy 1970 Nigel Planer Version, Unstable Audio [YwlA0M7QdP0].mkv",
+          "duration_min": 4.858,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   Road Signs 1970 Nigel Planer Version [QJUOW85oPf4].mkv",
+          "duration_min": 5.112,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   The Moody Concerto Eric Thompson, 1970 {RECONSTRUCTED} [7DSzfZ5vi6o].mkv",
+          "duration_min": 4.909,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   The Stiff Necked Heliotropes Eric Thompson, 1970 {RECONSTRUCTED V2} [kLDdILAkvgk].mkv",
+          "duration_min": 4.829,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   The Stiff Necked Heliotropes Eric Thompson, 1970 {RECONSTRUCTED V3} [cC2RlS1kRb8].mkv",
+          "duration_min": 4.828,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK   The Stiff Necked Heliotropes Eric Thompson, 1970 {RECONSTRUCTED} [OZDdYgM_wj4].mkv",
+          "duration_min": 4.83,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK Glasses, Part 1 1970 Nigel Planer Version, Unstable Audio [KXXvKk1i0j8].mkv",
+          "duration_min": 4.68,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/magic-roundabout/Season 01/The Magic Roundabout UK, Eric Thompson   Washing Machine BBC, January 13, 1977 [2xHoZ7Tj8gE].mkv",
+          "duration_min": 4.816,
+          "type": "episode"
+        }
+      ]
+    },
+    "gumby": {
+      "default_type": "episode",
+      "repeat": {
+        "default_repeatable": false
+      },
+      "items": [
+        {
+          "path": "/media/shows/gumby/Season 01/In the Dough (1956).mkv",
+          "duration_min": 10.904,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 01/Mirror Land (1956).mkv",
+          "duration_min": 9.701,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 01/Moon Trip (1956).mkv",
+          "duration_min": 15.698,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 01/Robot Rumpus (1956).mkv",
+          "duration_min": 11.27,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 01/The Black Knight (1956).mkv",
+          "duration_min": 10.757,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 01/The Eggs and Trixie (1956).mkv",
+          "duration_min": 11.197,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 01/The Little Lost Pony (1956).mkv",
+          "duration_min": 11.191,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 01/Toy Crazy (1956).mkv",
+          "duration_min": 10.966,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 02/The Gumby Show 1960 E01 The Zoops [84v3FnTMVS4].mkv",
+          "duration_min": 6.709,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 02/The Gumby Show 1960 E03 The Glob [oTOCmZzmpMU].mkv",
+          "duration_min": 5.701,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 02/The Gumby Show 1960 E07 The Witty Witch [6mdov7JAhdE].mkv",
+          "duration_min": 5.94,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 02/The Gumby Show 1960 E16 Scrooge Loose [8Ru05tSTmbw].mkv",
+          "duration_min": 6.852,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Season 03/The Gumby Show 1965 E03 Making Squares [TuK_6J1sBbg].mkv",
+          "duration_min": 4.444,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Specials/Gumbasia [gQL84yXnd4k].mkv",
+          "duration_min": 3.182,
+          "type": "episode"
+        },
+        {
+          "path": "/media/shows/gumby/Specials/Gumby - The REAL Small Planets (Yes, this is THAT one) [5itZW6ln4eU].mkv",
+          "duration_min": 6.209,
+          "type": "episode"
+        }
+      ]
+    },
+    "movies": {
+      "default_type": "movie",
+      "repeat": {
+        "default_repeatable": false
+      },
+      "items": [
+        {
+          "path": "/media/movies/Fantastic Planet (1973)/Fantastic Planet (1973).mp4",
+          "duration_min": 72.264,
+          "type": "movie"
+        },
+        {
+          "path": "/media/movies/Fehérlófia (1981)/Fehérlófia (1981).mp4",
+          "duration_min": 81.047,
+          "type": "movie"
+        },
+        {
+          "path": "/media/movies/The Adventures of Mark Twain (1985)/The Adventures of Mark Twain (1985).mkv",
+          "duration_min": 86.802,
+          "type": "movie"
+        },
+        {
+          "path": "/media/movies/The Adventures of Prince Achmed (1926)/The Adventures of Prince Achmed (1926).mp4",
+          "duration_min": 67.4,
+          "type": "movie"
+        },
+        {
+          "path": "/media/movies/The Mouse and His Child (1977)/The Mouse and His Child (1977).mp4",
+          "duration_min": 95.262,
+          "type": "movie"
+        },
+        {
+          "path": "/media/movies/The Phantom Tollbooth (1970)/The Phantom Tollbooth I Full Movie Starring Mel Blanc And Butch Patrick I Warner Classics [the-phantom-tollbooth-i-full-movie-starring-mel-blanc-and-butch-patrick-i-warner-classics].mp4",
+          "duration_min": 89.073,
+          "type": "movie"
+        },
+        {
+          "path": "/media/movies/The Point (1971)/Harry Nilsson's THE POINT (1971) - Alan Thicke Narration - Third Telecast Restoration [V6Qnd5vnpN0].mkv",
+          "duration_min": 74.514,
+          "type": "movie"
+        }
+      ]
+    }
+  },
+  "bumpers": {
+    "slots_per_break": 1,
+    "mixing_strategy": "round_robin",
+    "pools": {
+      "default": {
+        "weight": 1.0,
+        "items": [
+          {
+            "path": "/media/other_videos/coronet/Act Your Age (1949) [49JzdN7RnZ0].mkv",
+            "duration_min": 13.367,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Am I Trustworthy？ (1950) [mYQ6j0HLdok].mkv",
+            "duration_min": 10.364,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Appreciating Our Parents (1950) [AdmsMsa_FFU].mkv",
+            "duration_min": 10.28,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Are You A Good Citizen？ (1949) [gWr7SPDBITU].mkv",
+            "duration_min": 10.339,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Are You Popular？ (1947) [DjYBRhoQjWI].mkv",
+            "duration_min": 9.885,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Are You Ready For Marriage (1950) [f-GsZJYDIek].mkv",
+            "duration_min": 16.062,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Attitudes and Health (1949) [5h-rlgwC31s].mkv",
+            "duration_min": 9.925,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Better Use of Leisure Time (1950) [3uTpgBkZkUU].mkv",
+            "duration_min": 10.541,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Control Your Emotions (1950) [6k4D7pu_-ys].mkv",
+            "duration_min": 13.295,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Date Etiquette (1952) [ZyeiLujYvpE].mkv",
+            "duration_min": 9.633,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Dating Dos and Don'ts (1949) [3hCkwm_UDrw].mkv",
+            "duration_min": 12.428,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Developing Friendships (1950) [CRgXp_ClOBc].mkv",
+            "duration_min": 11.076,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Developing Leadership (1949) [zcBIPCgoi_0].mkv",
+            "duration_min": 9.757,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Exercise and Health (1949) [V_-aXBNncLo].mkv",
+            "duration_min": 9.849,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Family Life (1949) [aT-B66npbM8].mkv",
+            "duration_min": 9.822,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Feeling Left Out (1951) [TTtczeaMQEk].mkv",
+            "duration_min": 11.296,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Going Steady (1951) [BaMO-Y3fYm8].mkv",
+            "duration_min": 10.612,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Good Eating Habits (1951) [qQa-MYULdwg].mkv",
+            "duration_min": 9.764,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Good Table Manners (1951) [2bh0gkPQOoA].mkv",
+            "duration_min": 10.334,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Hoppy the Bunny (1953) [pram7A47FSU].mkv",
+            "duration_min": 10.263,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How Do You Know It's Love (1950) [c-R55WH_FRM].mkv",
+            "duration_min": 12.965,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How Friendly Are You (1952) [RP5t7mWNvdY].mkv",
+            "duration_min": 10.343,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How Quiet Helps at School (1953) [3y-4LvX9ibs].mkv",
+            "duration_min": 10.48,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How To Be Well-Groomed (1949) [q0UbQ6nl8aI].mkv",
+            "duration_min": 10.688,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How to Keep a Job (1949) [D5cICAdkSF4].mkv",
+            "duration_min": 11.377,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How to Say No (1951) [brtaGiJaSAE].mkv",
+            "duration_min": 10.507,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/How to Study (1946) [5U5Q3357T_k].mkv",
+            "duration_min": 8.721,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Improve Your Personality (1951) [VvFF9NlRlxQ].mkv",
+            "duration_min": 10.221,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Joan Avoids a Cold (1947) [hHE3DK9m-TU].mkv",
+            "duration_min": 10.429,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Lunchroom Manners (1959) [gTC70A5F1pY].mkv",
+            "duration_min": 9.533,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Marriage Is a Partnership (1951) [7l4NC0YkDlI].mkv",
+            "duration_min": 16.343,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Mind Your Manners (1953) [hk4cLSCEai4].mkv",
+            "duration_min": 10.703,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/More Dates For Kay (1952) [RdN_nZgpXec].mkv",
+            "duration_min": 10.157,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/One More Year On The Family Farm？ (1977) [unRjiSmdCqM].mkv",
+            "duration_min": 21.369,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Overcoming Fear (1950) [Vsdj8iti7Kg].mkv",
+            "duration_min": 12.653,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Parents： Who Needs Them？ (1973) [Lwdjpq0WQGI].mkv",
+            "duration_min": 9.76,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Self-Conscious Guy (1951) [ieQDxgs6CUw].mkv",
+            "duration_min": 10.382,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Shy Guy (1947) [0fppyTeiGds].mkv",
+            "duration_min": 13.593,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Snap Out Of It (1951) [zhfYvODAD9w].mkv",
+            "duration_min": 12.097,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Social Courtesy (1951) [Lqb34y2LBNY].mkv",
+            "duration_min": 10.289,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/The Fun of Being Thoughtful (1950) [PrgQ8cshgfo].mkv",
+            "duration_min": 10.15,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/The Fun of Making Friends (1950) [uVd9ekYnwV8].mkv",
+            "duration_min": 9.334,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/The Golden Rule (1953) [Zus5QNqXQcc].mkv",
+            "duration_min": 9.701,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Understand Your Emotions (1950) [q7K5CgnGpnA].mkv",
+            "duration_min": 12.87,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Ways To Better Conversation (1950) [071v0soAHUQ].mkv",
+            "duration_min": 8.805,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Ways to Settle Disputes (1950) [JCsp5lGxeCM].mkv",
+            "duration_min": 10.106,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/What To Do On A Date (1950) [5OuGdXI_zto].mkv",
+            "duration_min": 10.771,
+            "type": "other_video"
+          },
+          {
+            "path": "/media/other_videos/coronet/Your Thrift Habits (1948) [wvILxoZ8yiI].mkv",
+            "duration_min": 10.584,
+            "type": "other_video"
+          }
+        ]
+      }
+    }
+  }
+}

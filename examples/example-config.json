@@ -1,0 +1,84 @@
+{
+  "channel": {
+    "name": "Example Channel",
+    "number": 99,
+    "group": "Example Channel"
+  },
+  "schedule": {
+    "name": "Example Channel Schedule",
+    "shuffle": false,
+    "guide_mode": "include_all"
+  },
+  "solver": {
+    "time_limit_sec": 20,
+    "block_minutes": 30.0,
+    "seed": 12345
+  },
+  "pools": {
+    "shorts": {
+      "default_type": "other_video",
+      "repeat": {
+        "default_repeatable": false,
+        "default_repeat_cost_min": 30,
+        "default_max_extra_uses": 999
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 0
+      },
+      "items": [
+        {
+          "path": "/media/other_videos/shorts/Short A.mkv",
+          "duration_min": 6.0,
+          "repeatable": true,
+          "repeat_cost_min": 1
+        },
+        {
+          "path": "/media/other_videos/shorts/Short B.mkv",
+          "duration_min": 7.0
+        },
+        {
+          "path": "/media/other_videos/shorts/Short C.mkv",
+          "duration_min": 8.0
+        },
+        {
+          "path": "/media/other_videos/shorts/Short D.mkv",
+          "duration_min": 5.0
+        }
+      ]
+    },
+    "feature": {
+      "default_type": "movie",
+      "repeat": {
+        "default_repeatable": false
+      },
+      "items": [
+        {
+          "path": "/media/movies/Feature Film (1980)/Feature Film (1980).mkv",
+          "duration_min": 85.0
+        }
+      ]
+    }
+  },
+  "bumpers": {
+    "slots_per_break": 1,
+    "mixing_strategy": "round_robin",
+    "pools": {
+      "default": {
+        "weight": 1.0,
+        "items": [
+          {
+            "path": "/media/other_videos/coronet/Act Your Age (1949) [49JzdN7RnZ0].mkv",
+            "type": "other_video",
+            "duration_min": 10.0
+          },
+          {
+            "path": "/media/other_videos/coronet/How to Study (1946) [5U5Q3357T_k].mkv",
+            "type": "other_video",
+            "duration_min": 10.0
+          }
+        ]
+      }
+    }
+  }
+}

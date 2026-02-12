@@ -1,0 +1,121 @@
+{
+  "channel": {
+    "name": "Television",
+    "number": 2,
+    "group": "Television"
+  },
+  "schedule": {
+    "name": "Television Schedule",
+    "shuffle": false,
+    "guide_mode": "include_all"
+  },
+  "solver": {
+    "time_limit_sec": 60,
+    "block_minutes": 30.0,
+    "seed": 0
+  },
+  "pools": {
+    "silly_symphony": {
+      "default_type": "other_video",
+      "sequential": false,
+      "include_path_prefixes": [
+        "/media/other_videos/Silly Symphonies/"
+      ],
+      "repeat": {
+        "default_repeatable": false,
+        "default_repeat_cost_min": 30,
+        "default_max_extra_uses": 999
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 3
+      },
+      "overrides": [
+        {
+          "path": "/media/other_videos/Silly Symphonies/Silly Symphonies - 01 - The Skeleton Dance (1929).mp4",
+          "repeatable": true,
+          "repeat_cost_min": 1,
+          "max_extra_uses": 999
+        }
+      ]
+    },
+    "schoolhouse": {
+      "default_type": "other_video",
+      "sequential": false,
+      "include_path_prefixes": [
+        "/media/other_videos/schoolhouse-rock/"
+      ],
+      "repeat": {
+        "default_repeatable": false,
+        "default_repeat_cost_min": 30,
+        "default_max_extra_uses": 0
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 5
+      }
+    },
+    "krtek": {
+      "default_type": "episode",
+      "sequential": true,
+      "only_types": [
+        "episode"
+      ],
+      "include_path_prefixes": [
+        "/media/shows/krtek/"
+      ],
+      "repeat": {
+        "default_repeatable": false
+      },
+      "diversity": {
+        "dominant_block_threshold_min": 24,
+        "dominant_block_penalty_min": 2
+      }
+    },
+    "mickey": {
+      "default_type": "other_video",
+      "sequential": false,
+      "include_path_prefixes": [
+        "/media/other_videos/Mickey Mouse Shorts/"
+      ],
+      "repeat": {
+        "default_repeatable": false
+      }
+    },
+    "goofy": {
+      "default_type": "other_video",
+      "sequential": false,
+      "include_path_prefixes": [
+        "/media/other_videos/Goofy Shorts/"
+      ],
+      "repeat": {
+        "default_repeatable": false
+      }
+    },
+    "feature": {
+      "default_type": "movie",
+      "sequential": false,
+      "only_types": [
+        "movie"
+      ],
+      "include_path_prefixes": [
+        "/media/movies/Donald in Mathmagic Land (1959)/"
+      ]
+    }
+  },
+  "bumpers": {
+    "slots_per_break": 1,
+    "mixing_strategy": "round_robin",
+    "pools": {
+      "coronet": {
+        "weight": 1.0,
+        "only_types": [
+          "other_video"
+        ],
+        "include_path_prefixes": [
+          "/media/other_videos/coronet/"
+        ]
+      }
+    }
+  }
+}
