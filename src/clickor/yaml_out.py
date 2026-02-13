@@ -10,6 +10,7 @@ import yaml
 class PlaylistEntry:
     path: str
     media_type: str
+    include_in_guide: bool = True
 
 
 def build_yaml_config(
@@ -34,7 +35,14 @@ def build_yaml_config(
         "playlist": {
             "name": playlist_name,
             "group": playlist_group,
-            "items": [{"path": e.path, "type": e.media_type} for e in entries],
+            "items": [
+                {
+                    "path": e.path,
+                    "type": e.media_type,
+                    "include_in_guide": bool(e.include_in_guide),
+                }
+                for e in entries
+            ],
         },
     }
 

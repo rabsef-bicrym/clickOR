@@ -338,7 +338,14 @@ def cmd_flat(args: argparse.Namespace) -> int:
         _eprint(f"FLAT ERROR: {e}")
         return 2
 
-    playlist_items = [{"path": e.path, "type": e.media_type} for e in entries]
+    playlist_items = [
+        {
+            "path": e.path,
+            "type": e.media_type,
+            "include_in_guide": bool(e.include_in_guide),
+        }
+        for e in entries
+    ]
     lineup_cfg = build_lineup_config_for_db(flat_cfg, items=playlist_items)
 
     _eprint(f"Channel: {flat_cfg.channel_name}")

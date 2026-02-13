@@ -45,6 +45,8 @@ class TestFlat(unittest.TestCase):
         self.assertEqual(len(entries), 15)
         self.assertTrue(all(e.path == "/media/shorts/B.mp4" for e in entries))
         self.assertTrue(all(e.media_type == "other_video" for e in entries))
+        self.assertEqual(entries[0].include_in_guide, True)
+        self.assertTrue(all(not e.include_in_guide for e in entries[1:]))
 
     def test_expand_auto_loop_short(self):
         obj = {
@@ -76,6 +78,7 @@ class TestFlat(unittest.TestCase):
             ("/media/shorts/B.mp4", "other_video"),
             ("/media/shorts/B.mp4", "other_video"),
         ])
+        self.assertEqual([e.include_in_guide for e in entries], [True, True, False, False])
 
     def test_expand_auto_loop_disabled(self):
         obj = {
@@ -116,6 +119,7 @@ class TestFlat(unittest.TestCase):
             ("/media/other_videos/short-film.mp4", "other_video"),
             ("/media/other_videos/short-film.mp4", "other_video"),
         ])
+        self.assertEqual([e.include_in_guide for e in entries], [True, True, False, False])
 
     def test_unknown_item_type_is_error(self):
         obj = {

@@ -224,8 +224,14 @@ def expand_flat_to_playlist_entries(
         else:
             n = _repeat_count(duration_s=dur_s, target_s=int(target_s))
 
-        for _ in range(n):
-            entries.append(PlaylistEntry(path=it.path, media_type=media_type))
+        for idx in range(n):
+            entries.append(
+                PlaylistEntry(
+                    path=it.path,
+                    media_type=media_type,
+                    include_in_guide=(idx == 0),
+                )
+            )
 
     return entries
 

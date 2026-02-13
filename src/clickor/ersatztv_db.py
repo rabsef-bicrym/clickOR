@@ -105,9 +105,9 @@ def resolve_media_ids(
     db_path: str,
     ssh: Optional[Ssh],
     sudo: bool,
-) -> tuple[list[tuple[int, int]], list[str]]:
+) -> tuple[list[tuple[int, int, Optional[int]]], list[str]]:
     """
-    Resolve YAML playlist item paths to (MediaItemId, CollectionType).
+    Resolve YAML playlist item paths to (MediaItemId, CollectionType, include_in_guide_override).
 
     This is strict by default: any unresolved path is an error.
     """
@@ -160,13 +160,25 @@ LEFT JOIN OtherVideo ov ON ov.Id = v.OtherVideoId
         except ValueError:
             continue
 
-    resolved: list[tuple[int, int]] = []
+    resolved: list[tuple[int, int, Optional[int]]] = []
     errors: list[str] = []
     for idx, it in enumerate(items):
         path = it["path"]
         ty = it.get("type", "?")
         if path in lookup:
-            resolved.append(lookup[path])
+            include_raw = it.get("include_in_guide")
+            include_override: Optional[int]
+            if include_raw is None:
+                include_override = None
+            elif isinstance(include_raw, bool):
+                include_override = 1 if include_raw else 0
+            else:
+                errors.append(
+                    f"Item {idx}: include_in_guide must be boolean when provided for {ty} at {path}"
+                )
+                continue
+            media_id, ctype = lookup[path]
+            resolved.append((media_id, ctype, include_override))
         else:
             errors.append(f"Item {idx}: no match for {ty} at {path}")
 
@@ -175,7 +187,7 @@ LEFT JOIN OtherVideo ov ON ov.Id = v.OtherVideoId
 
 def generate_update_sql(
     config: dict[str, Any],
-    resolved_items: list[tuple[int, int]],
+    resolved_items: list[tuple[int, int, Optional[int]]],
     existing: ExistingIds,
     *,
     mode: str,
@@ -213,8 +225,11 @@ def generate_update_sql(
         sql.append(f"-- 1) Insert appended playlist items ({len(resolved_items)} items, guide_mode={guide_mode})")
         sql.append(f"-- Start index: {start_index}")
 
-    for idx, (media_id, ctype) in enumerate(resolved_items):
-        guide = 1 if (guide_mode == "include_all" or ctype in (10, 20)) else 0
+    for idx, (media_id, ctype, include_override) in enumerate(resolved_items):
+        if include_override is None:
+            guide = 1 if (guide_mode == "include_all" or ctype in (10, 20)) else 0
+        else:
+            guide = include_override
         sql.append(
             'INSERT INTO PlaylistItem ("Index", PlaylistId, CollectionType, CollectionId, MediaItemId, '
             "MultiCollectionId, SmartCollectionId, IncludeInProgramGuide, PlaybackOrder, PlayAll, Count) "
@@ -226,7 +241,7 @@ def generate_update_sql(
     return "\n".join(sql) + "\n"
 
 
-def generate_create_sql(config: dict[str, Any], resolved_items: list[tuple[int, int]]) -> str:
+def generate_create_sql(config: dict[str, Any], resolved_items: list[tuple[int, int, Optional[int]]]) -> str:
     ch = config["channel"]
     pl = config["playlist"]
     sched = config.get("schedule", {})
@@ -260,8 +275,11 @@ def generate_create_sql(config: dict[str, Any], resolved_items: list[tuple[int, 
     sql.append("")
 
     sql.append(f"-- 3) Playlist Items ({len(resolved_items)} items, guide_mode={guide_mode})")
-    for idx, (media_id, ctype) in enumerate(resolved_items):
-        guide = 1 if (guide_mode == "include_all" or ctype in (10, 20)) else 0
+    for idx, (media_id, ctype, include_override) in enumerate(resolved_items):
+        if include_override is None:
+            guide = 1 if (guide_mode == "include_all" or ctype in (10, 20)) else 0
+        else:
+            guide = include_override
         sql.append(
             'INSERT INTO PlaylistItem ("Index", PlaylistId, CollectionType, CollectionId, MediaItemId, '
             "MultiCollectionId, SmartCollectionId, IncludeInProgramGuide, PlaybackOrder, PlayAll, Count) "
