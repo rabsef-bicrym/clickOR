@@ -4,6 +4,8 @@ This document is intentionally not terse.
 
 The goal is: you can hand these instructions to another model (or a tired future-you) and it can "just do it" without inventing missing steps.
 
+If you need exact item-by-item programming order (for example, Nana-style channels with title cards + feature + short film), use `docs/FLAT_PLAYLIST_RUNBOOK.md` instead of the solver flow in this file.
+
 ## Part 0: What You Are Building
 
 You are building **one looping playlist** that ErsatzTV plays forever using a Flood schedule item.
@@ -241,4 +243,3 @@ Playout reset:
 Read:
 
 - `docs/TROUBLESHOOTING.md`
-

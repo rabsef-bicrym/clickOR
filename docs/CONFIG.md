@@ -57,6 +57,12 @@ Example:
 "schedule": { "name": "Television Schedule", "shuffle": false, "guide_mode": "include_all" }
 ```
 
+Guide override note:
+
+- In lineup YAML consumed by `clickor apply`, each `playlist.items[]` row may include `include_in_guide` (bool).
+- When present, it overrides schedule-level guide defaults for that row.
+- `clickor flat` uses this automatically so loop-expanded repeats can be guide-hidden after the first row.
+
 ## `solver`
 
 This controls how the NP-hard block packing behaves.

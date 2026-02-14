@@ -22,6 +22,7 @@ The result is repeatable channel operations, safer dry-runs, and easier iteratio
 - Bumper/interstitial-driven channels
 - Mixed channels with short-form + long-form blocks
 - Flat playlists where very short clips can optionally auto-loop
+- Flat playlists where looped short clips collapse duplicate guide rows
 
 ## Quick Start
 
@@ -59,6 +60,7 @@ clickor apply --yaml /tmp/television.yaml --apply --mode replace
 ## Core Docs
 
 - `docs/STEP_BY_STEP.md`
+- `docs/FLAT_PLAYLIST_RUNBOOK.md`
 - `docs/CONFIG.md`
 - `docs/EXPORT_FROM_DB.md`
 - `docs/PROBING.md`

@@ -15,8 +15,9 @@ Before running commands, read these files in order:
 1. `README.md`
 2. `docs/CONCEPTS.md`
 3. `docs/STEP_BY_STEP.md`
-4. `docs/CONFIG.md`
-5. `docs/TROUBLESHOOTING.md` (only if blocked)
+4. `docs/FLAT_PLAYLIST_RUNBOOK.md` (for exact-order channels and looped shorts)
+5. `docs/CONFIG.md`
+6. `docs/TROUBLESHOOTING.md` (only if blocked)
 
 ## Mental Model
 
@@ -73,7 +74,11 @@ Use `clickor flat` only when user wants explicit ordered playback (no solver pac
 1. `loop_to` is explicit per-item repeat target.
 2. `auto_loop` controls whether short-item auto-loop is allowed.
 3. Set `auto_loop: false` for title cards/slates that should not repeat.
-4. This behavior is path/type agnostic (`other_video` can still loop when intended).
+4. Auto-looped repeats are guide-collapsed by default:
+   - first repeated row is guide-visible
+   - additional repeats are guide-hidden
+5. This behavior is path/type agnostic (`other_video` can still loop when intended).
+6. For Nana-style channels, follow `docs/FLAT_PLAYLIST_RUNBOOK.md` exactly.
 
 ## Safety Guardrails
 
@@ -92,4 +97,6 @@ clickor solve --config /tmp/channel.config.json --out /tmp/channel.yaml --seed a
 clickor verify --config /tmp/channel.config.json --yaml /tmp/channel.yaml
 clickor apply --yaml /tmp/channel.yaml --dry-run --output /tmp/channel.sql
 clickor apply --yaml /tmp/channel.yaml --apply --mode replace
+clickor flat /tmp/nanas-flat.json --mode replace --output /tmp/nanas-flat.sql
+clickor flat /tmp/nanas-flat.json --mode replace --apply
 ```
