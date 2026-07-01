@@ -14,6 +14,18 @@ class FlatError(Exception):
     pass
 
 
+def _default_auto_loop_for_item(*, item_type: str, path: str) -> bool:
+    """
+    Return the default auto-loop behavior for one flat item.
+
+    Interstitial cards are non-looping by default. Users can still force looping
+    explicitly with `loop_to`, or override this default with `auto_loop: true`.
+    """
+    if item_type == "interstitial":
+        return False
+    return "interstitial" not in path.lower()
+
+
 def _require(obj: dict[str, Any], key: str, where: str) -> Any:
     if key not in obj:
         raise FlatError(f"Missing required key {key!r} in {where}")
@@ -167,7 +179,8 @@ def load_flat_config(path: str | Path) -> FlatConfig:
             )
         path_s = _as_non_empty_str(_require(it, "path", where), f"{where}.path")
         loop_to_s = _as_optional_int_seconds(it.get("loop_to"), f"{where}.loop_to")
-        auto_loop = it.get("auto_loop", True)
+        auto_loop_default = _default_auto_loop_for_item(item_type=item_type, path=path_s)
+        auto_loop = it.get("auto_loop", auto_loop_default)
         if not isinstance(auto_loop, bool):
             raise FlatError(f"{where}.auto_loop must be a boolean when provided")
         items.append(

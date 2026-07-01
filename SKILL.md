@@ -73,11 +73,12 @@ Use `clickor flat` only when user wants explicit ordered playback (no solver pac
 
 1. `loop_to` is explicit per-item repeat target.
 2. `auto_loop` controls whether short-item auto-loop is allowed.
-3. Set `auto_loop: false` for title cards/slates that should not repeat.
-4. Auto-looped repeats are guide-collapsed by default:
-   - first repeated row is guide-visible
-   - additional repeats are guide-hidden
-5. This behavior is path/type agnostic (`other_video` can still loop when intended).
+3. Interstitial cards should not repeat:
+   - `type: interstitial` defaults to non-looping
+   - paths containing `interstitial` default to non-looping
+   - you can still force loops with explicit `loop_to` or `auto_loop: true`
+4. Set `auto_loop: false` for any title cards/slates that should not repeat.
+5. ErsatzTV may still emit repeated guide rows for repeated plays of the same media item.
 6. For Nana-style channels, follow `docs/FLAT_PLAYLIST_RUNBOOK.md` exactly.
 
 ## Safety Guardrails

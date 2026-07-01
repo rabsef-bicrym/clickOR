@@ -15,13 +15,14 @@ and loop it as one Flood playlist in ErsatzTV.
 
 `clickor flat` preserves your exact item order and handles short-loop behavior directly.
 
-Guide behavior for looped shorts is built in:
+Guide behavior note:
 
 - loop-generated repeats are still in playout
-- only the first row is guide-visible
-- repeated rows are guide-hidden
+- interstitial cards default to non-looping in `clickor flat`
 
-This prevents duplicate guide spam for very short looped items.
+ErsatzTV currently treats playlist guide visibility by media item identity,
+so repeated plays of the same media can still appear as duplicate guide rows.
+Use non-looping interstitial cards to avoid intro-card guide spam.
 
 ## Loop Rules You Need
 
@@ -34,6 +35,11 @@ Per-item overrides:
 
 - `auto_loop: false` -> do not auto-loop this item (use for title cards/slates)
 - `loop_to: <seconds>` -> explicit loop target for this item
+
+Defaults:
+
+- `type: interstitial` defaults to `auto_loop: false`
+- paths containing `interstitial` also default to `auto_loop: false`
 
 Paths are type-agnostic. You can keep shorts under `other_video` and still use this.
 

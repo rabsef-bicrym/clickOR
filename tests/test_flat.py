@@ -121,6 +121,64 @@ class TestFlat(unittest.TestCase):
         ])
         self.assertEqual([e.include_in_guide for e in entries], [True, True, False, False])
 
+    def test_interstitial_type_defaults_to_non_looping(self):
+        obj = {
+            "mode": "flat",
+            "channel_name": "X",
+            "loop_short_under": 15,
+            "loop_short_to": 30,
+            "items": [{"type": "interstitial", "path": "/media/other_videos/cards/intro.mp4"}],
+        }
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            f.write(json.dumps(obj))
+            p = f.name
+
+        cfg = load_flat_config(p)
+        entries = expand_flat_to_playlist_entries(cfg, probe=lambda _p: 2.0)
+        self.assertEqual(len(entries), 1)
+        self.assertTrue(entries[0].include_in_guide)
+
+    def test_interstitial_path_defaults_to_non_looping(self):
+        obj = {
+            "mode": "flat",
+            "channel_name": "X",
+            "loop_short_under": 15,
+            "loop_short_to": 30,
+            "items": [{"type": "other_video", "path": "/media/other_videos/Classics - Interstitials/card.mp4"}],
+        }
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            f.write(json.dumps(obj))
+            p = f.name
+
+        cfg = load_flat_config(p)
+        entries = expand_flat_to_playlist_entries(cfg, probe=lambda _p: 2.0)
+        self.assertEqual(len(entries), 1)
+        self.assertTrue(entries[0].include_in_guide)
+
+    def test_interstitial_path_can_still_be_forced_to_loop(self):
+        obj = {
+            "mode": "flat",
+            "channel_name": "X",
+            "loop_short_under": 15,
+            "loop_short_to": 30,
+            "items": [
+                {
+                    "type": "other_video",
+                    "path": "/media/other_videos/Classics - Interstitials/card.mp4",
+                    "auto_loop": True,
+                }
+            ],
+        }
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            f.write(json.dumps(obj))
+            p = f.name
+
+        cfg = load_flat_config(p)
+        entries = expand_flat_to_playlist_entries(cfg, probe=lambda _p: 2.0)
+        self.assertGreater(len(entries), 1)
+        self.assertTrue(entries[0].include_in_guide)
+        self.assertTrue(all(not e.include_in_guide for e in entries[1:]))
+
     def test_unknown_item_type_is_error(self):
         obj = {
             "mode": "flat",
