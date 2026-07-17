@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import Optional
 
 
-SXXEXX_RE = re.compile(r"(?i)\bS(?P<s>\d{1,2})E(?P<e>\d{1,2})\b")
+SXXEXX_RE = re.compile(r"(?i)\bS(?P<s>\d{1,2})E(?P<e>\d{1,3})\b")
 
 
 @dataclass(frozen=True)
