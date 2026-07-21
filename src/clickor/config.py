@@ -5,6 +5,7 @@ import zlib
 from pathlib import Path
 from typing import Any, cast
 
+from .companions import CompanionError, parse_companions
 from .model import (
     BumperItem,
     BumperPoolConfig,
@@ -271,6 +272,11 @@ def load_config(path: str | Path) -> ChannelConfig:
         # If you really want duplicates, use repeats, not duplicated base entries.
         raise ConfigError(f"Duplicate item paths found in config (base items must be unique): {dups[:5]}")
 
+    try:
+        companions = parse_companions(raw.get("companions"))
+    except CompanionError as e:
+        raise ConfigError(str(e)) from e
+
     return ChannelConfig(
         channel=channel,
         schedule=schedule,
@@ -278,4 +284,5 @@ def load_config(path: str | Path) -> ChannelConfig:
         bumpers=bumpers,
         pools=pools,
         items=items,
+        companions=companions,
     )

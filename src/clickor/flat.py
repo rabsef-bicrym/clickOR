@@ -3,10 +3,11 @@ from __future__ import annotations
 import json
 import math
 import subprocess
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable, Optional
 
+from .companions import CompanionError, CompanionRule, cards_for_item, parse_companions
 from .yaml_out import PlaylistEntry
 
 
@@ -107,6 +108,7 @@ class FlatConfig:
     schedule_guide_mode: str
     short_loop: FlatShortLoopConfig
     items: list[FlatItem]
+    companions: list[CompanionRule] = field(default_factory=list)
 
 
 _ALLOWED_MEDIA_TYPES = {"episode", "movie", "music_video", "other_video"}
@@ -187,6 +189,22 @@ def load_flat_config(path: str | Path) -> FlatConfig:
             FlatItem(item_type=item_type, path=path_s, loop_to_s=loop_to_s, auto_loop=auto_loop)
         )
 
+    try:
+        companions = parse_companions(raw.get("companions"))
+    except CompanionError as e:
+        raise FlatError(str(e)) from e
+    for rule in companions:
+        if rule.scope == "block_start":
+            raise FlatError(
+                "companions scope 'block_start' is not valid in flat mode (flat playlists have no blocks); "
+                "use scope 'every_match' with a narrower match instead"
+            )
+        if rule.pools is not None:
+            raise FlatError(
+                "companions match.pools is not valid in flat mode (flat items have no pools); "
+                "match on types or path_glob instead"
+            )
+
     return FlatConfig(
         channel_name=channel_name,
         channel_number=channel_number,
@@ -198,6 +216,7 @@ def load_flat_config(path: str | Path) -> FlatConfig:
         schedule_guide_mode=schedule_guide_mode,
         short_loop=short_loop,
         items=items,
+        companions=companions,
     )
 
 
@@ -224,6 +243,24 @@ def expand_flat_to_playlist_entries(
         if media_type not in _ALLOWED_MEDIA_TYPES:
             raise FlatError(f"BUG: mapped media_type {media_type!r} is not allowed")
 
+        # Companions match on the flat schema type (so a rule can say
+        # types: ["episode"] or ["feature"]) and are never themselves looped.
+        try:
+            cards = cards_for_item(
+                cfg.companions,
+                path=it.path,
+                pool=None,
+                media_type=it.item_type,
+                is_block_start=False,
+            )
+        except CompanionError as e:
+            raise FlatError(str(e)) from e
+        for c in cards:
+            if c.position == "before":
+                entries.append(
+                    PlaylistEntry(path=c.path, media_type=c.media_type, include_in_guide=c.include_in_guide)
+                )
+
         target_s: Optional[int] = it.loop_to_s
         if target_s is None and it.auto_loop and cfg.short_loop.loop_to_s > 0:
             dur_s = probe(it.path)
@@ -245,6 +282,12 @@ def expand_flat_to_playlist_entries(
                     include_in_guide=(idx == 0),
                 )
             )
+
+        for c in cards:
+            if c.position == "after":
+                entries.append(
+                    PlaylistEntry(path=c.path, media_type=c.media_type, include_in_guide=c.include_in_guide)
+                )
 
     return entries
 

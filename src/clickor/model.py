@@ -115,3 +115,10 @@ class ChannelConfig:
     bumpers: BumpersConfig
     pools: dict[str, PoolConfig]
     items: list[Item]
+    # Companion cards spliced around matched items after solving.
+    # list[companions.CompanionRule]; untyped here to avoid a module cycle.
+    companions: list[Any] = None  # type: ignore[assignment]
+
+    def __post_init__(self) -> None:
+        if self.companions is None:
+            object.__setattr__(self, "companions", [])
