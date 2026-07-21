@@ -198,7 +198,12 @@ def solve_minimal_cycle(cfg: ChannelConfig) -> SolveResult:
 
     status = solver.Solve(model)
     if status not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
-        raise SolverError("CP-SAT could not find a feasible schedule (base packing)")
+        if status == cp_model.INFEASIBLE:
+            raise SolverError("CP-SAT proved the schedule infeasible (base packing) — check pool/block configuration")
+        raise SolverError(
+            "CP-SAT found no schedule within the time limit (base packing) — "
+            "not proven infeasible; try a higher --time-limit-sec"
+        )
 
     min_blocks = int(round(solver.ObjectiveValue()))
 
@@ -402,7 +407,12 @@ def solve_minimal_cycle(cfg: ChannelConfig) -> SolveResult:
 
     status2 = solver2.Solve(model2)
     if status2 not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
-        raise SolverError("CP-SAT could not find a feasible schedule (filler/diversity)")
+        if status2 == cp_model.INFEASIBLE:
+            raise SolverError("CP-SAT proved the schedule infeasible (filler/diversity) — check pool/block configuration")
+        raise SolverError(
+            "CP-SAT found no schedule within the time limit (filler/diversity) — "
+            "not proven infeasible; try a higher --time-limit-sec"
+        )
 
     # Extract blocks.
     used_blocks = []

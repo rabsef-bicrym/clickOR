@@ -4,6 +4,7 @@ from dataclasses import replace
 from typing import Any, Optional
 
 from .bumpers import BumperSelector
+from .companions import cards_for_item
 from .config import parse_seed
 from .model import ChannelConfig
 from .solver import SolveResult, solve_minimal_cycle
@@ -12,6 +13,35 @@ from .yaml_out import PlaylistEntry, build_yaml_config
 
 class GenerateError(Exception):
     pass
+
+
+def block_entries_with_companions(rules, block_items) -> list[PlaylistEntry]:
+    """
+    One content block's playlist entries: each item wrapped with any companion
+    cards it is owed. The first item of the block also triggers block_start
+    rules. Pure and solver-free so it can be tested directly.
+    """
+    entries: list[PlaylistEntry] = []
+    for pos, it in enumerate(block_items):
+        cards = cards_for_item(
+            rules,
+            path=it.path,
+            pool=it.pool,
+            media_type=it.media_type,
+            is_block_start=(pos == 0),
+        )
+        for c in cards:
+            if c.position == "before":
+                entries.append(
+                    PlaylistEntry(path=c.path, media_type=c.media_type, include_in_guide=c.include_in_guide)
+                )
+        entries.append(PlaylistEntry(path=it.path, media_type=it.media_type))
+        for c in cards:
+            if c.position == "after":
+                entries.append(
+                    PlaylistEntry(path=c.path, media_type=c.media_type, include_in_guide=c.include_in_guide)
+                )
+    return entries
 
 
 def _apply_solver_overrides(
@@ -78,7 +108,7 @@ def solve_to_yaml_obj(
     for block in result.blocks:
         bumpers = selector.next_bumpers()
         entries.extend([PlaylistEntry(path=b.path, media_type=b.media_type) for b in bumpers])
-        entries.extend([PlaylistEntry(path=it.path, media_type=it.media_type) for it in block.items])
+        entries.extend(block_entries_with_companions(cfg2.companions, block.items))
 
     yaml_obj = build_yaml_config(
         channel=cfg2.channel,

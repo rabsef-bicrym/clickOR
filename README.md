@@ -23,6 +23,51 @@ The result is repeatable channel operations, safer dry-runs, and easier iteratio
 - Mixed channels with short-form + long-form blocks
 - Flat playlists where very short clips can optionally auto-loop
 - Flat playlists where looped short clips collapse duplicate guide rows
+- Companion cards spliced next to specific items ("And now:" title cards,
+  per-film slates, block-opening idents) — see Companions below
+
+## Companions
+
+Bumpers are anonymous — shuffled from pools between blocks. Companions are
+addressed: a card that belongs to one item and travels with it. The solver
+never sees them; they are spliced into the final order afterward. The solver
+owns the programs; injection is a choice.
+
+Add an optional top-level `companions` list to a solve or flat config:
+
+```json
+"companions": [
+  {
+    "match": {"pools": ["coronet"]},
+    "scope": "every_match",
+    "position": "before",
+    "card": {"template": "/media/other_videos/Cards/Coronet/{stem}.mp4",
+             "type": "other_video", "include_in_guide": true}
+  },
+  {
+    "match": {"types": ["episode"], "path_glob": "*/MST3K/*"},
+    "card": {"template": "/media/other_videos/Cards/MST3K/{stem}.mp4"}
+  },
+  {
+    "match": {"pools": ["feature"]},
+    "scope": "block_start",
+    "card": {"template": "/media/other_videos/Cards/Idents/movies.mp4"}
+  }
+]
+```
+
+- `match` — all given conditions must hold: `pools` (solve mode only),
+  `types`, `path_glob` (fnmatch).
+- `scope` — `every_match` (default) or `block_start` (first matched item of
+  each content block; solve mode only).
+- `position` — `before` (default) or `after` the item.
+- `card.template` — format string with `{stem}` (basename, no extension),
+  `{name}`, `{dir}`. `card.map` gives exact item-path -> card-path overrides
+  and wins over the template. A matched item with no resolvable card is an
+  error, not a silent drop.
+- Cards count as furniture in `verify`: excluded from block-capacity sums and
+  the long-form one-item rule, and a dedicated adjacency check fails the
+  lineup if any matched item is missing its card (or grew an extra one).
 
 ## Quick Start
 

@@ -5,6 +5,7 @@ from typing import Any, Iterable
 
 import yaml
 
+from .companions import cards_for_item
 from .model import ChannelConfig
 from .tv import parse_sxxexx
 
@@ -69,6 +70,19 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
     duration_by_path_s: dict[str, int] = {it.path: it.duration_s for it in cfg.items}
     for pool in cfg.bumpers.pools.values():
         duration_by_path_s.update({it.path: it.duration_s for it in pool.items})
+
+    # Companion cards: resolve every card any config item could owe, so card
+    # paths are known and exempt from content-only checks. Cards count as
+    # "content" for run structure (they sit inside content runs) but are
+    # furniture for duration purposes — like bumpers, they are excluded from
+    # block-capacity sums.
+    companion_card_paths: set[str] = set()
+    for it in cfg.items:
+        for start in (True, False):
+            for c in cards_for_item(
+                cfg.companions, path=it.path, pool=it.pool, media_type=it.media_type, is_block_start=start
+            ):
+                companion_card_paths.add(c.path)
 
     # 1) Playlist should start with bumpers.
     slots = cfg.bumpers.slots_per_break
@@ -136,11 +150,11 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
             findings.append(VerifyFinding("ERROR", f"Empty content run at index {start}"))
             break
 
-    # 3) All paths should be known (either bumper or content).
+    # 3) All paths should be known (bumper, content, or companion card).
     unknown = []
     for idx, it in enumerate(items):
         p = it["path"]
-        if p not in bumper_set and p not in content_by_path:
+        if p not in bumper_set and p not in content_by_path and p not in companion_card_paths:
             unknown.append((idx, p))
     if unknown:
         findings.append(
@@ -154,7 +168,7 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
     counts: dict[str, int] = {}
     for it in items:
         p = it["path"]
-        if p in bumper_set:
+        if p in bumper_set or p in companion_card_paths:
             continue
         counts[p] = counts.get(p, 0) + 1
 
@@ -220,7 +234,10 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
     if not blocks:
         findings.append(VerifyFinding("ERROR", "No content blocks found (playlist had bumpers only?)"))
     else:
-        for bi, block in enumerate(blocks):
+        for bi, raw_block in enumerate(blocks):
+            # Companion cards are furniture: they ride inside the block but do
+            # not count against its capacity or the long-form one-item rule.
+            block = [p for p in raw_block if p not in companion_card_paths]
             dur_s = sum(duration_by_path_s.get(p, 0) for p in block)
             if not block:
                 findings.append(VerifyFinding("ERROR", f"Empty content block at block index {bi}"))
@@ -275,6 +292,44 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
                     VerifyFinding(
                         "ERROR",
                         f"Sequential pool {pool_name!r} is out of order: {p1} then {p2}",
+                    )
+                )
+                break
+
+    # 8) Companion adjacency: every matched item must have exactly its cards,
+    # exactly adjacent. Reconstruct each content run from the config's rules
+    # and require the playlist to match — a rebuild must not silently drop
+    # (or duplicate) furniture.
+    if cfg.companions:
+        for is_b, ln, start in runs:
+            if is_b:
+                continue
+            actual_run = [items[i]["path"] for i in range(start, start + ln)]
+            content_seq = [p for p in actual_run if p in content_by_path]
+            expected_run: list[str] = []
+            for ci, p in enumerate(content_seq):
+                base = content_by_path[p]
+                cards = cards_for_item(
+                    cfg.companions,
+                    path=p,
+                    pool=base.pool,
+                    media_type=base.media_type,
+                    is_block_start=(ci == 0),
+                )
+                expected_run.extend(c.path for c in cards if c.position == "before")
+                expected_run.append(p)
+                expected_run.extend(c.path for c in cards if c.position == "after")
+            if actual_run != expected_run:
+                diverge = next(
+                    (i for i, (a, e) in enumerate(zip(actual_run, expected_run)) if a != e),
+                    min(len(actual_run), len(expected_run)),
+                )
+                findings.append(
+                    VerifyFinding(
+                        "ERROR",
+                        f"Companion adjacency broken in content run at index {start}: "
+                        f"position {diverge} has {actual_run[diverge] if diverge < len(actual_run) else '<missing>'!r}, "
+                        f"expected {expected_run[diverge] if diverge < len(expected_run) else '<nothing>'!r}",
                     )
                 )
                 break
