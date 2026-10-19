@@ -22,7 +22,9 @@ class CompanionRule:
     Injection is a choice, not a constraint.
 
     Matching (all provided conditions must hold):
-      pools      — item's pool name is in this list (solve mode only)
+      pools      — item's pool name is in this list (solve mode only); a
+                   bumper pool's name matches its bumpers, so a slate can
+                   ride with every Coronet from the break
       types      — item's media/item type is in this list
       path_glob  — item's path matches this fnmatch glob
 

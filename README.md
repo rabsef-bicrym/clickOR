@@ -56,7 +56,9 @@ Add an optional top-level `companions` list to a solve or flat config:
 ]
 ```
 
-- `match` — all given conditions must hold: `pools` (solve mode only),
+- `match` — all given conditions must hold: `pools` (solve mode only;
+  content pool names and bumper pool names both count, so
+  `{"pools": ["coronet"]}` puts a slate before every Coronet in a break),
   `types`, `path_glob` (fnmatch).
 - `scope` — `every_match` (default) or `block_start` (first matched item of
   each content block; solve mode only).
@@ -65,6 +67,8 @@ Add an optional top-level `companions` list to a solve or flat config:
   `{name}`, `{dir}`. `card.map` gives exact item-path -> card-path overrides
   and wins over the template. A matched item with no resolvable card is an
   error, not a silent drop.
+- `export-from-db` copies a spec's `companions` list into the solve config
+  verbatim, so the spec stays the single source for a channel.
 - Cards count as furniture in `verify`: excluded from block-capacity sums and
   the long-form one-item rule, and a dedicated adjacency check fails the
   lineup if any matched item is missing its card (or grew an extra one).

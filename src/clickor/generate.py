@@ -15,6 +15,36 @@ class GenerateError(Exception):
     pass
 
 
+def bumper_entries_with_companions(rules, bumpers_with_pools) -> list[PlaylistEntry]:
+    """
+    One break's playlist entries: each bumper wrapped with any companion cards
+    it is owed. Rules address bumpers by their bumper-pool name (`match.pools`),
+    their media type, or a path glob; `block_start` never fires for a bumper
+    (bumpers open breaks, not content blocks). Pure, like its block sibling.
+    """
+    entries: list[PlaylistEntry] = []
+    for pool_name, b in bumpers_with_pools:
+        cards = cards_for_item(
+            rules,
+            path=b.path,
+            pool=pool_name,
+            media_type=b.media_type,
+            is_block_start=False,
+        )
+        for c in cards:
+            if c.position == "before":
+                entries.append(
+                    PlaylistEntry(path=c.path, media_type=c.media_type, include_in_guide=c.include_in_guide)
+                )
+        entries.append(PlaylistEntry(path=b.path, media_type=b.media_type))
+        for c in cards:
+            if c.position == "after":
+                entries.append(
+                    PlaylistEntry(path=c.path, media_type=c.media_type, include_in_guide=c.include_in_guide)
+                )
+    return entries
+
+
 def block_entries_with_companions(rules, block_items) -> list[PlaylistEntry]:
     """
     One content block's playlist entries: each item wrapped with any companion
@@ -106,8 +136,7 @@ def solve_to_yaml_obj(
     selector = BumperSelector(cfg2.bumpers, seed=result.seed)
     entries: list[PlaylistEntry] = []
     for block in result.blocks:
-        bumpers = selector.next_bumpers()
-        entries.extend([PlaylistEntry(path=b.path, media_type=b.media_type) for b in bumpers])
+        entries.extend(bumper_entries_with_companions(cfg2.companions, selector.next_bumpers_with_pools()))
         entries.extend(block_entries_with_companions(cfg2.companions, block.items))
 
     yaml_obj = build_yaml_config(

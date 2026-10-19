@@ -83,6 +83,16 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
                 cfg.companions, path=it.path, pool=it.pool, media_type=it.media_type, is_block_start=start
             ):
                 companion_card_paths.add(c.path)
+    # Cards owed to bumpers (rules addressing a bumper pool, a bumper's type or
+    # path). They live inside bumper runs: furniture of the break, not content.
+    bumper_card_paths: set[str] = set()
+    for pool_name, pool in cfg.bumpers.pools.items():
+        for b in pool.items:
+            for c in cards_for_item(
+                cfg.companions, path=b.path, pool=pool_name, media_type=b.media_type, is_block_start=False
+            ):
+                bumper_card_paths.add(c.path)
+    companion_card_paths |= bumper_card_paths
 
     # 1) Playlist should start with bumpers.
     slots = cfg.bumpers.slots_per_break
@@ -95,8 +105,11 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
         )
         return findings
 
-    for i in range(slots):
-        p = items[i]["path"]
+    seen_bumpers = 0
+    for i, it in enumerate(items):
+        p = it["path"]
+        if p in bumper_card_paths:
+            continue  # a bumper's card is part of the break
         if p not in bumper_set:
             findings.append(
                 VerifyFinding(
@@ -104,6 +117,9 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
                     f"Playlist does not start with {slots} bumper(s). Item {i} is not a bumper: {p}",
                 )
             )
+            break
+        seen_bumpers += 1
+        if seen_bumpers == slots:
             break
 
     # 2) Enforce the bumper/content alternating run structure.
@@ -115,7 +131,8 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
     #
     # And because Flood loops: the playlist should end with content (not bumpers).
     def is_bumper(path: str) -> bool:
-        return path in bumper_set
+        # A bumper's companion card sits in the break with its bumper.
+        return path in bumper_set or path in bumper_card_paths
 
     runs: list[tuple[bool, int, int]] = []  # (is_bumper, length, start_index)
     cur_is_b = is_bumper(items[0]["path"])
@@ -138,14 +155,17 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
         findings.append(VerifyFinding("ERROR", "Playlist ends with bumpers; Flood wrap will create a bumper run boundary issue"))
 
     for is_b, ln, start in runs:
-        if is_b and ln != slots:
-            findings.append(
-                VerifyFinding(
-                    "ERROR",
-                    f"Bumper run length must be exactly {slots}. Found run length {ln} starting at index {start}",
+        if is_b:
+            # Cards are furniture; only the bumpers themselves fill the slots.
+            n_bumpers = sum(1 for i in range(start, start + ln) if items[i]["path"] in bumper_set)
+            if n_bumpers != slots:
+                findings.append(
+                    VerifyFinding(
+                        "ERROR",
+                        f"Bumper run must hold exactly {slots} bumper(s). Found {n_bumpers} starting at index {start}",
+                    )
                 )
-            )
-            break
+                break
         if (not is_b) and ln <= 0:
             findings.append(VerifyFinding("ERROR", f"Empty content run at index {start}"))
             break
@@ -195,30 +215,37 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
                 )
 
     # 5) Bumper exhaust-before-repeat (per bumper pool).
-    # For M bumpers in a pool, no bumper should repeat within the next M-1 uses *of that pool*.
+    # The selector deals a pool as a shuffled bag: M distinct uses, then a fresh
+    # shuffle. So the uses of a pool, read M at a time from the start, must
+    # each be M distinct bumpers (the final partial bag too), and no bumper may
+    # play twice in a row across a bag boundary. A sliding-window test would
+    # demand the same permutation every bag, which a shuffle never promises.
     for pool_name, pool in cfg.bumpers.pools.items():
         pool_paths = [it.path for it in pool.items]
         if len(pool_paths) <= 1:
             continue
         pool_set = set(pool_paths)
-        last_seen: dict[str, int] = {}
-        seen_count = 0
-        for it in items:
-            p = it["path"]
-            if p not in pool_set:
-                continue
-            if p in last_seen:
-                gap = seen_count - last_seen[p]
-                if gap < len(pool_set):
-                    findings.append(
-                        VerifyFinding(
-                            "ERROR",
-                            f"Bumper repeats before exhaustion in pool {pool_name!r}. {p} repeated after {gap} uses; need >= {len(pool_set)}",
-                        )
-                    )
+        m = len(pool_set)
+        uses = [it["path"] for it in items if it["path"] in pool_set]
+        problem: str | None = None
+        for k in range(0, len(uses), m):
+            bag = uses[k : k + m]
+            if len(set(bag)) != len(bag):
+                dup = next(p for p in bag if bag.count(p) > 1)
+                problem = f"{dup} plays twice within one deal of {m} (uses {k}-{k + len(bag) - 1})"
+                break
+        if problem is None:
+            for i in range(1, len(uses)):
+                if uses[i] == uses[i - 1]:
+                    problem = f"{uses[i]} plays back-to-back at uses {i - 1} and {i}"
                     break
-            last_seen[p] = seen_count
-            seen_count += 1
+        if problem is not None:
+            findings.append(
+                VerifyFinding(
+                    "ERROR",
+                    f"Bumper repeats before exhaustion in pool {pool_name!r}. {problem}",
+                )
+            )
 
     # 6) Block duration checks (content only).
     cap_s = cfg.solver.block_s
@@ -302,9 +329,39 @@ def verify_yaml_against_config(cfg: ChannelConfig, yaml_path: str) -> list[Verif
     # (or duplicate) furniture.
     if cfg.companions:
         for is_b, ln, start in runs:
-            if is_b:
-                continue
             actual_run = [items[i]["path"] for i in range(start, start + ln)]
+            if is_b:
+                expected_break: list[str] = []
+                for p in actual_run:
+                    if p not in bumper_set:
+                        continue
+                    cards = cards_for_item(
+                        cfg.companions,
+                        path=p,
+                        pool=bumper_pool_by_path[p],
+                        media_type=next(
+                            b.media_type for b in cfg.bumpers.pools[bumper_pool_by_path[p]].items if b.path == p
+                        ),
+                        is_block_start=False,
+                    )
+                    expected_break.extend(c.path for c in cards if c.position == "before")
+                    expected_break.append(p)
+                    expected_break.extend(c.path for c in cards if c.position == "after")
+                if actual_run != expected_break:
+                    diverge = next(
+                        (i for i, (a, e) in enumerate(zip(actual_run, expected_break)) if a != e),
+                        min(len(actual_run), len(expected_break)),
+                    )
+                    findings.append(
+                        VerifyFinding(
+                            "ERROR",
+                            f"Companion adjacency broken in bumper run at index {start}: "
+                            f"position {diverge} has {actual_run[diverge] if diverge < len(actual_run) else '<missing>'!r}, "
+                            f"expected {expected_break[diverge] if diverge < len(expected_break) else '<nothing>'!r}",
+                        )
+                    )
+                    break
+                continue
             content_seq = [p for p in actual_run if p in content_by_path]
             expected_run: list[str] = []
             for ci, p in enumerate(content_seq):

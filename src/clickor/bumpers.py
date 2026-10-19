@@ -90,15 +90,24 @@ class BumperSelector:
             return self._rng.choices(names, weights=weights, k=1)[0]
         raise ValueError(f"Unknown bumpers.mixing_strategy: {strategy!r}")
 
+    def next_bumpers_with_pools(self) -> list[tuple[str, BumperItem]]:
+        """
+        Return (pool_name, bumper) pairs for one break (slots_per_break of them).
+
+        The pool name is what companion rules address (`match.pools`), so a
+        card can ride with a bumper exactly as it rides with content.
+        """
+        out: list[tuple[str, BumperItem]] = []
+        for _ in range(self.cfg.slots_per_break):
+            pool = self._choose_pool_name()
+            out.append((pool, self._cyclers[pool].next()))
+        return out
+
     def next_bumpers(self) -> list[BumperItem]:
         """
         Return the bumper items for one break (a list of length slots_per_break).
         """
-        out: list[BumperItem] = []
-        for _ in range(self.cfg.slots_per_break):
-            pool = self._choose_pool_name()
-            out.append(self._cyclers[pool].next())
-        return out
+        return [b for _pool, b in self.next_bumpers_with_pools()]
 
     def iter_bumpers(self) -> Iterator[list[BumperItem]]:
         while True:
