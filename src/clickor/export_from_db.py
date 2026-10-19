@@ -292,5 +292,9 @@ def export_config_from_spec(
         "bumpers": bumpers_out,
         "pools": pools_out,
     }
+    # Companion rules are config, not DB fact: copy them through verbatim so the
+    # spec is the single source for a channel (no post-export hand edits).
+    if spec.get("companions") is not None:
+        out_obj["companions"] = spec["companions"]
 
     Path(out_path).write_text(json.dumps(out_obj, indent=2, ensure_ascii=False))
