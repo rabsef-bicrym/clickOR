@@ -35,6 +35,7 @@ Per-item overrides:
 
 - `auto_loop: false` -> do not auto-loop this item (use for title cards/slates)
 - `loop_to: <seconds>` -> explicit loop target for this item
+- `include_in_guide: false` -> keep this item out of the program guide (station idents, promos); default true
 
 Defaults:
 

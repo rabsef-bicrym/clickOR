@@ -78,6 +78,7 @@ Use `clickor flat` only when user wants explicit ordered playback (no solver pac
    - paths containing `interstitial` default to non-looping
    - you can still force loops with explicit `loop_to` or `auto_loop: true`
 4. Set `auto_loop: false` for any title cards/slates that should not repeat.
+5. Set `include_in_guide: false` on a flat item that should air without a guide entry (idents, promos).
 5. ErsatzTV may still emit repeated guide rows for repeated plays of the same media item.
 6. For Nana-style channels, follow `docs/FLAT_PLAYLIST_RUNBOOK.md` exactly.
 

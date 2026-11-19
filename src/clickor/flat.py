@@ -94,6 +94,7 @@ class FlatItem:
     path: str
     loop_to_s: Optional[int]
     auto_loop: bool
+    include_in_guide: bool = True
 
 
 @dataclass(frozen=True)
@@ -185,8 +186,17 @@ def load_flat_config(path: str | Path) -> FlatConfig:
         auto_loop = it.get("auto_loop", auto_loop_default)
         if not isinstance(auto_loop, bool):
             raise FlatError(f"{where}.auto_loop must be a boolean when provided")
+        include_in_guide = it.get("include_in_guide", True)
+        if not isinstance(include_in_guide, bool):
+            raise FlatError(f"{where}.include_in_guide must be a boolean when provided")
         items.append(
-            FlatItem(item_type=item_type, path=path_s, loop_to_s=loop_to_s, auto_loop=auto_loop)
+            FlatItem(
+                item_type=item_type,
+                path=path_s,
+                loop_to_s=loop_to_s,
+                auto_loop=auto_loop,
+                include_in_guide=include_in_guide,
+            )
         )
 
     try:
@@ -279,7 +289,7 @@ def expand_flat_to_playlist_entries(
                 PlaylistEntry(
                     path=it.path,
                     media_type=media_type,
-                    include_in_guide=(idx == 0),
+                    include_in_guide=(idx == 0) and it.include_in_guide,
                 )
             )
 

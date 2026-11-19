@@ -210,5 +210,38 @@ class TestFlat(unittest.TestCase):
         self.assertEqual(lineup["playlist"]["name"], "X Playlist")
 
 
+    def test_item_can_be_hidden_from_guide(self):
+        obj = {
+            "mode": "flat",
+            "channel_name": "X",
+            "loop_short_under": 0,
+            "loop_short_to": 0,
+            "items": [
+                {"type": "interstitial", "path": "/media/other_videos/Interstitials/id.mp4", "include_in_guide": False},
+                {"type": "episode", "path": "/media/shows/S/S01E01.mp4"},
+            ],
+        }
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            f.write(json.dumps(obj))
+            p = f.name
+
+        cfg = load_flat_config(p)
+        entries = expand_flat_to_playlist_entries(cfg, probe=lambda _p: 30.0)
+        self.assertEqual([e.include_in_guide for e in entries], [False, True])
+
+    def test_item_include_in_guide_must_be_boolean(self):
+        obj = {
+            "mode": "flat",
+            "channel_name": "X",
+            "items": [{"type": "interstitial", "path": "/media/other_videos/id.mp4", "include_in_guide": "no"}],
+        }
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            f.write(json.dumps(obj))
+            p = f.name
+
+        with self.assertRaises(FlatError):
+            load_flat_config(p)
+
+
 if __name__ == "__main__":
     unittest.main()
